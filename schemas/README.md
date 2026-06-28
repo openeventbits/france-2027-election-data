@@ -12,6 +12,7 @@ The project is designed for automation, but automation should not write directly
 |---|---|---|
 | `sources.csv` | Registry of official, primary, secondary, and reference sources. | Source labels, source filters, verification display. |
 | `source_feeds.csv` | Registry of exact pages, APIs, feeds, and endpoints monitored for source discovery. | Feed transparency, automation planning, source audit. |
+| `reference_datasets.csv` | Registry of official or open datasets used as historical, schema, or methodology references. | Provenance for reusable baseline/reference data. |
 | `candidates.csv` | Candidate and likely-candidate registry. | Candidate filters, marker colors, candidate cards. |
 | `candidate_status_log.csv` | Status history for candidates. | Candidate timeline and status updates. |
 | `campaign_events.csv` | Geographically meaningful campaign and election events. | Main France map markers and live event wire. |
@@ -200,4 +201,5 @@ Controlled values for `relevance`:
 * `unclear`
 
 Auto-triage can reduce review burden, but canonical promotion should remain explicit.
+
 
