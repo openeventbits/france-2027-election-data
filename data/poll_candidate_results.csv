@@ -1,5 +1,1 @@
 poll_result_id,poll_id,candidate_id,candidate_name,party,bloc,poll_value,unit,rank_in_poll,previous_poll_id,previous_poll_value,change_vs_previous_comparable,comparison_status,comparison_note,source_id,source_url,captured_at
-pollres_001,poll_prototype_001,cand_attal,Gabriel Attal,Renaissance,Centre / Macron camp,11,%,4,poll_prototype_previous,10,1,prototype_comparable,Prototype comparison only,src_poll_prototype,https://example.com,2026-06-27T12:00:00Z
-pollres_002,poll_prototype_001,cand_philippe,Edouard Philippe,Horizons,Centre-right,17,%,2,poll_prototype_previous,18,-1,prototype_comparable,Prototype comparison only,src_poll_prototype,https://example.com,2026-06-27T12:00:00Z
-pollres_003,poll_prototype_001,cand_bardella,Jordan Bardella,Rassemblement National,RN / far right,34,%,1,poll_prototype_previous,33,1,prototype_comparable,Prototype comparison only,src_poll_prototype,https://example.com,2026-06-27T12:00:00Z
-pollres_004,poll_prototype_001,cand_melenchon,Jean-Luc Melenchon,La France insoumise,Left,12,%,3,poll_prototype_previous,12,0,prototype_comparable,Prototype comparison only,src_poll_prototype,https://example.com,2026-06-27T12:00:00Z

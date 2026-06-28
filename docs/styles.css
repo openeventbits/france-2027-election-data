@@ -292,3 +292,290 @@ h2 {
 .caption-links a:hover {
   text-decoration: underline;
 }
+
+/* Public prototype warning */
+.prototype-warning {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  border-radius: 8px;
+  background: rgba(250, 204, 21, 0.10);
+  color: #fde68a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.prototype-warning strong {
+  color: #facc15;
+}
+
+/* Dashboard viewport polish before public launch */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.app-shell {
+  height: 100vh;
+  min-height: 0;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.topbar {
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(26px, 2.5vw, 36px);
+}
+
+.prototype-warning {
+  display: block;
+  margin: 0 0 12px;
+  padding: 11px 13px;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  border-radius: 8px;
+  background: rgba(250, 204, 21, 0.10);
+  color: #fde68a;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.prototype-warning strong {
+  color: #facc15;
+}
+
+.dashboard-grid {
+  height: calc(100vh - 152px);
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  align-items: stretch;
+}
+
+.map-panel {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+}
+
+.side-panel {
+  height: calc(100vh - 152px);
+  max-height: none;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: minmax(170px, 0.85fr) auto minmax(0, 1fr);
+  gap: 12px;
+  padding-right: 0;
+}
+
+.panel-block {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+}
+
+.panel-header {
+  flex: 0 0 auto;
+  margin-bottom: 10px;
+}
+
+.event-wire,
+.candidate-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.event-wire::-webkit-scrollbar,
+.candidate-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.event-wire::-webkit-scrollbar-thumb,
+.candidate-list::-webkit-scrollbar-thumb {
+  background: rgba(149, 163, 184, 0.35);
+  border-radius: 999px;
+}
+
+.candidate-item,
+.event-item,
+.poll-card {
+  padding: 10px;
+}
+
+.candidate-item strong,
+.event-item strong {
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  body {
+    overflow: auto;
+  }
+
+  .app-shell {
+    height: auto;
+    overflow: visible;
+  }
+
+  .dashboard-grid,
+  .side-panel {
+    height: auto;
+  }
+
+  #map {
+    height: 62vh;
+    min-height: 420px;
+  }
+}
+
+/* Final desktop fit pass */
+.app-shell {
+  padding: 14px;
+}
+
+.topbar {
+  padding: 0 2px 8px;
+}
+
+.eyebrow {
+  margin-bottom: 2px;
+}
+
+h1 {
+  font-size: clamp(25px, 2.2vw, 34px);
+  line-height: 1;
+}
+
+.prototype-warning {
+  margin: 0 0 10px;
+  padding: 9px 12px;
+  font-size: 13px;
+}
+
+.dashboard-grid {
+  height: calc(100vh - 174px);
+  min-height: 0;
+  gap: 12px;
+}
+
+.map-caption {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.side-panel {
+  height: calc(100vh - 174px);
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 210px 190px minmax(0, 1fr);
+  gap: 10px;
+  overflow: hidden;
+}
+
+.panel-block {
+  min-height: 0;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.panel-header {
+  margin-bottom: 8px;
+}
+
+.event-wire,
+.candidate-list {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.poll-card {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.pending-card .meta {
+  font-size: 12px;
+}
+
+.candidate-list {
+  padding-right: 5px;
+}
+
+.candidate-item {
+  padding: 9px 10px;
+}
+
+.candidate-item strong {
+  margin-bottom: 3px;
+}
+
+.candidate-item .meta {
+  font-size: 12px;
+}
+
+@media (min-width: 981px) {
+  .side-panel .panel-block:nth-child(3) {
+    min-height: 0;
+  }
+
+  .side-panel .panel-block:nth-child(3) .candidate-list {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+}
+
+/* Stable viewport fit: header + warning + dashboard */
+.app-shell {
+  height: 100vh;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.dashboard-grid {
+  height: 100%;
+  min-height: 0;
+}
+
+.map-panel,
+.side-panel {
+  height: 100%;
+  min-height: 0;
+}
+
+.side-panel {
+  grid-template-rows: minmax(190px, 0.8fr) auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+#map {
+  height: auto;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.candidate-list,
+.event-wire {
+  min-height: 0;
+  overflow-y: auto;
+}

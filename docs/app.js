@@ -92,13 +92,12 @@ function renderCandidates(candidates) {
 function renderPollCard(poll) {
   const card = document.getElementById("pollCard");
   card.innerHTML = `
-    <div class="meta">Institute</div>
-    <strong>${poll.institute}</strong>
-    <div class="meta">${poll.publisher} · published ${poll.publication_date}</div>
-    <div class="meta">Fieldwork: ${poll.fieldwork}</div>
-    <div class="meta">Sample: ${poll.sample_size}</div>
-    <div class="meta"><a href="${poll.notice_url}" target="_blank" rel="noreferrer">Source notice</a></div>
-    <p class="meta" style="margin-top:10px">${poll.note}</p>
+    <div class="pending-card">
+      <strong>Poll notices pending verified public source</strong>
+      <p class="meta" style="margin-top:8px">
+        This panel will show public poll notices after source and reuse conditions are reviewed. Placeholder poll values are not displayed in the public prototype.
+      </p>
+    </div>
   `;
 }
 
@@ -108,7 +107,10 @@ function initMap(data) {
     scrollWheelZoom: true,
     zoomSnap: 0.25,
     zoomDelta: 0.25
-  }).setView([46.75, 2.3], 6.65);
+  }).setView([46.75, 2.35], 5.95);
+
+  window.addEventListener("resize", () => map.invalidateSize());
+  setTimeout(() => map.invalidateSize(), 150);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',

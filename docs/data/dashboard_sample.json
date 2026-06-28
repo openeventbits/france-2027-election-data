@@ -9,8 +9,8 @@
       "party": "Renaissance",
       "bloc": "Centre / Macron camp",
       "color_hex": "#2F80ED",
-      "latest_poll": 11,
-      "poll_change": 1,
+      "latest_poll": null,
+      "poll_change": null,
       "poll_unit": "%"
     },
     {
@@ -19,18 +19,8 @@
       "party": "Horizons",
       "bloc": "Centre-right",
       "color_hex": "#00A3A3",
-      "latest_poll": 17,
-      "poll_change": -1,
-      "poll_unit": "%"
-    },
-    {
-      "candidate_id": "cand_bardella",
-      "display_name": "Jordan Bardella",
-      "party": "Rassemblement National",
-      "bloc": "RN / far right",
-      "color_hex": "#1D4ED8",
-      "latest_poll": 34,
-      "poll_change": 1,
+      "latest_poll": null,
+      "poll_change": null,
       "poll_unit": "%"
     },
     {
@@ -39,8 +29,8 @@
       "party": "La France insoumise",
       "bloc": "Left",
       "color_hex": "#C026D3",
-      "latest_poll": 12,
-      "poll_change": 0,
+      "latest_poll": null,
+      "poll_change": null,
       "poll_unit": "%"
     }
   ],
@@ -49,7 +39,7 @@
       "event_id": "evt_2026_0001",
       "event_date": "2026-06-27",
       "event_type": "public_meeting",
-      "title": "Prototype public meeting marker",
+      "title": "Demo public meeting marker",
       "candidate_id": "cand_attal",
       "candidate_name": "Gabriel Attal",
       "location_name": "Lyon",
@@ -57,7 +47,7 @@
       "region": "Auvergne-Rhone-Alpes",
       "latitude": 45.764,
       "longitude": 4.8357,
-      "source_name": "Prototype source",
+      "source_name": "Demo source",
       "source_url": "https://example.com",
       "verification_status": "prototype"
     },
@@ -65,7 +55,7 @@
       "event_id": "evt_2026_0002",
       "event_date": "2026-06-27",
       "event_type": "candidate_visit",
-      "title": "Prototype candidate visit marker",
+      "title": "Demo candidate visit marker",
       "candidate_id": "cand_philippe",
       "candidate_name": "Edouard Philippe",
       "location_name": "Le Havre",
@@ -73,23 +63,7 @@
       "region": "Normandie",
       "latitude": 49.4944,
       "longitude": 0.1079,
-      "source_name": "Prototype source",
-      "source_url": "https://example.com",
-      "verification_status": "prototype"
-    },
-    {
-      "event_id": "evt_2026_0003",
-      "event_date": "2026-06-27",
-      "event_type": "party_event",
-      "title": "Prototype party event marker",
-      "candidate_id": "cand_bardella",
-      "candidate_name": "Jordan Bardella",
-      "location_name": "Marseille",
-      "commune": "Marseille",
-      "region": "Provence-Alpes-Cote d'Azur",
-      "latitude": 43.2965,
-      "longitude": 5.3698,
-      "source_name": "Prototype source",
+      "source_name": "Demo source",
       "source_url": "https://example.com",
       "verification_status": "prototype"
     },
@@ -97,7 +71,7 @@
       "event_id": "evt_2026_0004",
       "event_date": "2026-06-27",
       "event_type": "debate",
-      "title": "Prototype debate marker",
+      "title": "Demo debate marker",
       "candidate_id": "cand_melenchon",
       "candidate_name": "Jean-Luc Melenchon",
       "location_name": "Paris",
@@ -105,19 +79,19 @@
       "region": "Ile-de-France",
       "latitude": 48.8566,
       "longitude": 2.3522,
-      "source_name": "Prototype source",
+      "source_name": "Demo source",
       "source_url": "https://example.com",
       "verification_status": "prototype"
     }
   ],
   "latest_poll": {
-    "poll_id": "poll_prototype_001",
-    "institute": "Prototype institute",
-    "publisher": "Prototype publisher",
-    "publication_date": "2026-06-27",
-    "fieldwork": "2026-06-24 to 2026-06-26",
-    "sample_size": "1000",
-    "notice_url": "https://example.com",
-    "note": "Prototype data only. Poll values are placeholders."
+    "poll_id": null,
+    "institute": null,
+    "publisher": null,
+    "publication_date": null,
+    "fieldwork": "None to None",
+    "sample_size": null,
+    "notice_url": null,
+    "note": null
   }
 }

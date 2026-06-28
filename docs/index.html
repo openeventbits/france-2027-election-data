@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FR27 Open Data | Live Map Prototype</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260628-3">
 </head>
 <body>
   <main class="app-shell">
     <header class="topbar">
       <div>
         <p class="eyebrow">FR27 Open Data</p>
-        <h1>France 2027 Live Election Map</h1>
+        <h1>France 2027 Election Data Map</h1>
       </div>
       <div class="status-pill">
         <span class="dot"></span>
-        Prototype data
+        Demo data
       </div>
     </header>
+
+    <section class="prototype-warning" role="note">
+      <strong>Demo data only.</strong>
+      This preview demonstrates the open-data workflow with placeholder campaign events. Poll values stay hidden until verified public notices are added.
+    </section>
 
     <section class="dashboard-grid">
       <section class="map-panel" aria-label="France election event map">
@@ -45,7 +50,7 @@
 
         <section class="panel-block">
           <div class="panel-header">
-            <h2>Latest Poll Snapshot</h2>
+            <h2>Poll Notices</h2>
             <span>National</span>
           </div>
           <div id="pollCard" class="poll-card"></div>
@@ -63,8 +68,7 @@
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="./app.js"></script>
+  <script src="./app.js?v=20260628-3"></script>
 </body>
 </html>
-
 

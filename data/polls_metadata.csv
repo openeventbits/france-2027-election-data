@@ -1,2 +1,1 @@
 poll_id,institute,sponsor,publisher,publication_date,fieldwork_start,fieldwork_end,sample_size,population,method,round_type,scenario,commission_notice_url,public_report_url,source_id,verification_status,notes,captured_at,updated_at
-poll_prototype_001,Prototype institute,Prototype sponsor,Prototype publisher,2026-06-27,2026-06-24,2026-06-26,1000,registered_voters,online,first_round,prototype,https://example.com,https://example.com,src_poll_prototype,prototype,Prototype data only. Poll values are placeholders.,2026-06-27T12:00:00Z,2026-06-27T12:00:00Z
