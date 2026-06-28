@@ -160,4 +160,44 @@ During the MVP, source feeds are mostly `manual` or `manual_review`.
 Automation should only be enabled after the feed is stable, legally safe, and useful enough to justify scheduled collection.
 
 A feed can be active as a reference source while still being `not_automated`.
+## Current Automation Pipeline
+
+The current MVP automation pipeline is metadata-only.
+
+```text
+data/source_feeds.csv
+  -> scripts/fetch_data_gouv_metadata.py
+  -> staging/fetched_dataset_metadata.csv
+  -> scripts/prepare_dataset_review.py
+  -> staging/fetched_dataset_review.csv
+  -> scripts/triage_dataset_review.py
+  -> reviewed staging rows
+  -> later: promotion into canonical /data files
+```
+
+The automation layer may fetch and classify candidate records, but it must not publish rows directly into canonical `/data` files.
+
+### Staged Dataset Review
+
+`staging/fetched_dataset_review.csv` records the review state for fetched metadata rows.
+
+Controlled values for `review_status`:
+
+* `pending`
+* `likely_useful`
+* `likely_noise`
+* `needs_review`
+* `approved`
+* `rejected`
+
+Controlled values for `relevance`:
+
+* `core`
+* `supporting`
+* `historical`
+* `local_noise`
+* `irrelevant`
+* `unclear`
+
+Auto-triage can reduce review burden, but canonical promotion should remain explicit.
 
