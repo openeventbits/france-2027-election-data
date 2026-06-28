@@ -28,6 +28,31 @@ Current working components:
 
 Prototype rows are clearly marked as prototype data. Real public-source rows should pass through staging, validation, and review before becoming canonical data.
 
+## Current Data Pipeline
+
+The repository now includes a first metadata-only automation pipeline.
+
+```text
+data/source_feeds.csv
+  -> scripts/fetch_data_gouv_metadata.py
+  -> staging/fetched_dataset_metadata.csv
+  -> scripts/prepare_dataset_review.py
+  -> staging/fetched_dataset_review.csv
+  -> scripts/triage_dataset_review.py
+  -> reviewed staging rows
+  -> later: promotion into canonical /data files
+```
+
+The current fetcher reads approved API feeds from `data/source_feeds.csv`, fetches public `data.gouv.fr` metadata, and writes results into `/staging`.
+
+The auto-triage layer labels fetched rows conservatively:
+
+* `likely_useful`
+* `likely_noise`
+* `needs_review`
+
+This keeps automation useful without allowing scripts to publish directly into canonical public data.
+
 ## What This Is
 
 FR27 Open Data is an open civic-data project for the French 2027 presidential election.
@@ -266,4 +291,5 @@ FR27 Open Data should be small, transparent, and useful before it becomes ambiti
 The goal is not to predict the French 2027 election.
 
 The goal is to make the public evidence layer easier to inspect, reuse, correct, fork, and cite.
+
 
