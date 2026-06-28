@@ -1,22 +1,22 @@
 fetch_id,review_status,relevance,review_note,reviewed_by,reviewed_at
-d4e6aa39915110ba,pending,unclear,,,
-7b82d2305aa51815,pending,unclear,,,
-31834ff8cd3c4d25,pending,unclear,,,
-56db47435a9fb289,pending,unclear,,,
-5c4cd9bc1b07fb40,pending,unclear,,,
-beedd51469a66a7e,pending,unclear,,,
-ac1eb93431900f20,pending,unclear,,,
-c488add682f1a1ac,pending,unclear,,,
-3928f3b1d9741191,pending,unclear,,,
-517c6ef97bac247e,pending,unclear,,,
-1d162d4310a24bca,pending,unclear,,,
-a9a027a1e25d0cd9,pending,unclear,,,
-f753d37cbe622d06,pending,unclear,,,
-bfe71b9186357bbf,pending,unclear,,,
-ad22c37b89f1dd22,pending,unclear,,,
-2014edc01a741b42,pending,unclear,,,
-502d1a72ff2b3ad2,pending,unclear,,,
-a21f5f61cc9b1a75,pending,unclear,,,
-3d6180eb820ed943,pending,unclear,,,
-2195b6ecade5cc5b,pending,unclear,,,
-ab172f8ad19cbc24,pending,unclear,,,
+d4e6aa39915110ba,likely_useful,core,Official Conseil constitutionnel parrainages dataset metadata.,auto_triage,2026-06-28T12:58:12+00:00
+7b82d2305aa51815,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+31834ff8cd3c4d25,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+56db47435a9fb289,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+5c4cd9bc1b07fb40,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+beedd51469a66a7e,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+ac1eb93431900f20,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+c488add682f1a1ac,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+3928f3b1d9741191,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+517c6ef97bac247e,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+1d162d4310a24bca,likely_useful,historical,"Historical presidential election dataset; useful as reference, not 2027 live data.",auto_triage,2026-06-28T12:58:12+00:00
+a9a027a1e25d0cd9,needs_review,supporting,Presidential election dataset; requires review before use.,auto_triage,2026-06-28T12:58:12+00:00
+f753d37cbe622d06,likely_useful,historical,"Historical presidential election dataset; useful as reference, not 2027 live data.",auto_triage,2026-06-28T12:58:12+00:00
+bfe71b9186357bbf,likely_useful,historical,"Historical presidential election dataset; useful as reference, not 2027 live data.",auto_triage,2026-06-28T12:58:12+00:00
+ad22c37b89f1dd22,likely_useful,historical,"Historical presidential election dataset; useful as reference, not 2027 live data.",auto_triage,2026-06-28T12:58:12+00:00
+2014edc01a741b42,needs_review,supporting,Presidential election dataset; requires review before use.,auto_triage,2026-06-28T12:58:12+00:00
+502d1a72ff2b3ad2,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+a21f5f61cc9b1a75,likely_useful,historical,"Historical presidential election dataset; useful as reference, not 2027 live data.",auto_triage,2026-06-28T12:58:12+00:00
+3d6180eb820ed943,likely_noise,local_noise,Local or municipal dataset; not core FR27 MVP data.,auto_triage,2026-06-28T12:58:12+00:00
+2195b6ecade5cc5b,needs_review,supporting,Presidential election dataset; requires review before use.,auto_triage,2026-06-28T12:58:12+00:00
+ab172f8ad19cbc24,likely_useful,historical,"Historical presidential election dataset; useful as reference, not 2027 live data.",auto_triage,2026-06-28T12:58:12+00:00
