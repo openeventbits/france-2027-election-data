@@ -38,9 +38,7 @@ function createMarkerIcon(color) {
 
 function popupHtml(event) {
   const candidate = candidateById(event.candidate_id);
-  const poll = typeof candidate.latest_poll === "number"
-    ? `${candidate.latest_poll}${candidate.poll_unit || "%"} (${formatChange(candidate.poll_change || 0)} vs previous comparable)`
-    : "No poll snapshot";
+  const poll = "Poll data pending verified public source";
 
   return `
     <div class="popup-card">
@@ -50,7 +48,7 @@ function popupHtml(event) {
       <hr>
       <div><strong>${event.candidate_name}</strong></div>
       <div class="meta">${candidate.party || ""} · ${candidate.bloc || ""}</div>
-      <div class="meta">Latest national poll snapshot: ${poll}</div>
+      <div class="meta">${poll}</div>
       <hr>
       <div class="meta">Source: <a href="${event.source_url}" target="_blank" rel="noreferrer">${event.source_name}</a></div>
       <div class="meta">Verification: ${event.verification_status}</div>
@@ -85,9 +83,7 @@ function renderCandidates(candidates) {
       </div>
       <div class="meta">${candidate.party} · ${candidate.bloc}</div>
       <div class="meta">
-        Latest national poll snapshot:
-        <span class="poll-number">${candidate.latest_poll}${candidate.poll_unit}</span>
-        ${formatChange(candidate.poll_change)}
+        Poll data pending verified public source
       </div>
     </article>
   `).join("");
@@ -150,5 +146,4 @@ boot().catch((error) => {
   console.error(error);
   document.body.insertAdjacentHTML("beforeend", `<pre style="padding:16px;color:#fb7185">${error.message}</pre>`);
 });
-
 
