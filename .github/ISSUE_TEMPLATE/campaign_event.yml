@@ -1,0 +1,52 @@
+name: Campaign event submission
+description: Suggest a source-linked campaign or election event for the map.
+title: "Campaign event: "
+labels: ["event", "needs-review"]
+body:
+  - type: input
+    id: event_title
+    attributes:
+      label: Event title
+      placeholder: Candidate visit, public meeting, debate, party event
+    validations:
+      required: true
+
+  - type: input
+    id: event_date
+    attributes:
+      label: Event date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: Commune, department, region
+    validations:
+      required: true
+
+  - type: input
+    id: candidate_or_party
+    attributes:
+      label: Candidate or party linked to event
+      placeholder: Candidate name or party name
+    validations:
+      required: false
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add caveats, uncertainty, or context.
+    validations:
+      required: false

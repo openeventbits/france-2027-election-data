@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FR27 Open Data | Live Map Prototype</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">FR27 Open Data</p>
+        <h1>France 2027 Live Election Map</h1>
+      </div>
+      <div class="status-pill">
+        <span class="dot"></span>
+        Prototype data
+      </div>
+    </header>
+
+    <section class="dashboard-grid">
+      <section class="map-panel" aria-label="France election event map">
+        <div id="map"></div>
+        <div class="map-caption">
+          <span>Every marker should resolve to a source-linked dataset row.</span>
+          <span class="caption-links">
+            <a href="https://github.com/openeventbits/france-2027-election-data">README</a>
+            <a href="https://github.com/openeventbits/france-2027-election-data/blob/main/METHODOLOGY.md">Methodology</a>
+            <a href="https://github.com/openeventbits/france-2027-election-data/blob/main/data/campaign_events.csv">CSV data</a>
+            <a href="https://github.com/openeventbits/france-2027-election-data/blob/main/CORRECTIONS.md">Corrections</a>
+          </span>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel-block">
+          <div class="panel-header">
+            <h2>Live Wire</h2>
+            <span id="updatedAt">Loading</span>
+          </div>
+          <div id="eventWire" class="event-wire"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-header">
+            <h2>Latest Poll Snapshot</h2>
+            <span>National</span>
+          </div>
+          <div id="pollCard" class="poll-card"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-header">
+            <h2>Candidates</h2>
+            <span>Color key</span>
+          </div>
+          <div id="candidateList" class="candidate-list"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+name: Data check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-and-export:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate data
+        run: python scripts/validate_data.py
+
+      - name: Export dashboard JSON
+        run: python scripts/export_dashboard_json.py
+
+      - name: Ensure generated dashboard data is committed
+        run: git diff --exit-code docs/data/dashboard_sample.json

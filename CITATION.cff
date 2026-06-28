@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "FR27 Open Data"
+message: "If you use this dataset or code, please cite it as below."
+type: dataset
+authors:
+  - name: "Open Event Bits"
+date-released: 2026-06-28
+repository-code: "https://github.com/openeventbits/france-2027-election-data"
+url: "https://openeventbits.github.io/france-2027-election-data/"
+abstract: "Open, versioned, source-linked data for the French 2027 presidential election."
+keywords:
+  - France
+  - election
+  - open data
+  - civic technology
+  - public data
+  - presidential election
+license: "CC-BY-4.0"

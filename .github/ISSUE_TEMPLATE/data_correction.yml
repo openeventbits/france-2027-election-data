@@ -1,0 +1,53 @@
+name: Data correction
+description: Report a correction to an existing dataset row.
+title: "Correction: "
+labels: ["correction", "needs-review"]
+body:
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset
+      options:
+        - sources.csv
+        - candidates.csv
+        - candidate_status_log.csv
+        - campaign_events.csv
+        - polls_metadata.csv
+        - poll_candidate_results.csv
+        - official_documents.csv
+        - changelog.csv
+        - snapshots_manifest.csv
+    validations:
+      required: true
+
+  - type: input
+    id: row_id
+    attributes:
+      label: Row ID
+      placeholder: event_id, candidate_id, poll_id, source_id, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Describe the error clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_correction
+    attributes:
+      label: Proposed correction
+      description: State the replacement value or correction.
+    validations:
+      required: true
+
+  - type: input
+    id: supporting_source
+    attributes:
+      label: Supporting source URL
+      placeholder: https://...
+    validations:
+      required: true

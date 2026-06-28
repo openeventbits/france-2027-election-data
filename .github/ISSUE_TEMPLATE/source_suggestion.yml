@@ -1,0 +1,45 @@
+name: Source suggestion
+description: Suggest a source for FR27 Open Data.
+title: "Source suggestion: "
+labels: ["source", "needs-review"]
+body:
+  - type: input
+    id: source_name
+    attributes:
+      label: Source name
+      placeholder: Conseil constitutionnel, Commission des sondages, candidate website, party website
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: Source type
+      options:
+        - official institution
+        - official open-data portal
+        - polling authority
+        - pollster notice
+        - candidate official source
+        - party official source
+        - media source
+        - civic-data reference
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Why this source matters
+      description: Explain what data this source can support.
+    validations:
+      required: true

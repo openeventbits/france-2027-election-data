@@ -1,0 +1,16 @@
+source_id,source_name,source_type,publisher,country,url,rss_url,license_or_terms,primary_or_secondary,collection_method,status,notes,last_checked_at
+src_prototype,Prototype source,prototype,FR27 Open Data,FR,https://example.com,,prototype,secondary,manual,active,Placeholder source for dashboard prototype,2026-06-27
+src_poll_prototype,Prototype poll notice,prototype,FR27 Open Data,FR,https://example.com,,prototype,secondary,manual,active,Placeholder poll source for dashboard prototype,2026-06-27
+src_conseil_constitutionnel,Conseil constitutionnel,official_institution,Conseil constitutionnel,FR,https://www.conseil-constitutionnel.fr/,,terms_unknown,primary,manual,active,Election calendar candidacies sponsorships and results source,2026-06-28
+src_commission_sondages,Commission des sondages,polling_authority,Commission des sondages,FR,https://www.commission-des-sondages.fr/,,terms_unknown,primary,manual,active,Poll notices and legal polling context,2026-06-28
+src_data_gouv,data.gouv.fr,official_open_data,DINUM,FR,https://www.data.gouv.fr/,,Open Licence 2.0,primary,manual,active,French public data portal,2026-06-28
+src_cnccfp,CNCCFP,campaign_finance_authority,CNCCFP,FR,https://www.cnccfp.fr/,,terms_unknown,primary,manual,active,Campaign finance and political financing source,2026-06-28
+src_hatvp,HATVP,transparency_authority,HATVP,FR,https://www.hatvp.fr/,,terms_unknown,primary,manual,active,Declarations interests assets and public integrity source,2026-06-28
+src_legifrance,Legifrance,legal_source,DILA,FR,https://www.legifrance.gouv.fr/,,terms_unknown,primary,manual,active,Legal and regulatory source,2026-06-28
+src_insee,INSEE,official_statistics,INSEE,FR,https://www.insee.fr/,,terms_unknown,primary,manual,active,Population geography and commune reference data,2026-06-28
+src_ifop,IFOP,pollster,IFOP,FR,https://www.ifop.com/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
+src_ipsos,Ipsos,pollster,Ipsos,FR,https://www.ipsos.com/fr-fr,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
+src_elabe,Elabe,pollster,Elabe,FR,https://elabe.fr/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
+src_opinionway,OpinionWay,pollster,OpinionWay,FR,https://www.opinion-way.com/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
+src_odoxa,Odoxa,pollster,Odoxa,FR,https://www.odoxa.fr/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
+src_bva,BVA,pollster,BVA,FR,https://www.bva-group.com/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
