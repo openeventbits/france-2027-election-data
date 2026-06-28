@@ -11,6 +11,7 @@ The project is designed for automation, but automation should not write directly
 | Dataset | Purpose | Dashboard Role |
 |---|---|---|
 | `sources.csv` | Registry of official, primary, secondary, and reference sources. | Source labels, source filters, verification display. |
+| `source_feeds.csv` | Registry of exact pages, APIs, feeds, and endpoints monitored for source discovery. | Feed transparency, automation planning, source audit. |
 | `candidates.csv` | Candidate and likely-candidate registry. | Candidate filters, marker colors, candidate cards. |
 | `candidate_status_log.csv` | Status history for candidates. | Candidate timeline and status updates. |
 | `campaign_events.csv` | Geographically meaningful campaign and election events. | Main France map markers and live event wire. |
@@ -24,6 +25,8 @@ The project is designed for automation, but automation should not write directly
 
 ```text
 online public sources
+  -> source registry
+  -> source feed registry
   -> fetch and parse scripts
   -> /staging/*.csv
   -> validation
@@ -136,3 +139,25 @@ Validation scripts should eventually check:
 * dates use ISO format
 * verification status values are controlled
 * no unsupported poll comparison is presented as comparable
+## Source Feed Registry
+
+`source_feeds.csv` documents the exact pages, APIs, catalog entries, or feeds the project may monitor.
+
+This file is separate from `sources.csv`.
+
+`source_feeds.csv` answers:
+
+* Which exact endpoint is being watched?
+* Which source owns it?
+* What type of feed is it?
+* What data might it support?
+* Is automation planned or active?
+* How often should it be checked?
+* Does it require human review?
+
+During the MVP, source feeds are mostly `manual` or `manual_review`.
+
+Automation should only be enabled after the feed is stable, legally safe, and useful enough to justify scheduled collection.
+
+A feed can be active as a reference source while still being `not_automated`.
+
