@@ -1,0 +1,1912 @@
+{
+  "access_audiences": [],
+  "access_type": "open",
+  "access_type_reason": null,
+  "access_type_reason_category": null,
+  "acronym": null,
+  "archived": null,
+  "authorization_request_url": null,
+  "badges": [],
+  "contact_points": [],
+  "created_at": "2022-01-26T09:44:01.715000+00:00",
+  "deleted": null,
+  "description": "Le Conseil constitutionnel publiera, deux fois par semaine, les parrainages validés. Ces données seront disponibles en format données ouvertes, ou « open data ».\n\nATTENTION: le total des parrainages affiché ne préjuge pas de la validité de la candidature. Seule la décision finale du Conseil constitutionnel fait foi.\n\nEn effet, une candidature est retenue si:\n1 – pas plus d’un dixième des 500 parrainages nécessaires, c’est-à-dire 50 au maximum, émanent d’un même département ou collectivité d’outre-mer ;\n2 – ces parrainages sont signés par des élus d’au moins 30 départements ou collectivités d’outre-mer.",
+  "description_short": null,
+  "extras": {},
+  "featured": true,
+  "frequency": "semiweekly",
+  "frequency_date": null,
+  "harvest": null,
+  "id": "61f109d1fdf76c4be0604d0c",
+  "internal": {
+    "created_at_internal": "2022-01-26T09:44:01.715000+00:00",
+    "last_modified_internal": "2022-03-07T18:34:26.124000+00:00"
+  },
+  "last_modified": "2022-03-07T18:34:26.124000+00:00",
+  "last_update": "2022-03-07T18:34:26.124000+00:00",
+  "license": "other-pd",
+  "metrics": {
+    "dataservices": 0,
+    "discussions": 3,
+    "discussions_open": 1,
+    "followers": 9,
+    "followers_by_months": {
+      "2024-08": 0,
+      "2024-09": 0,
+      "2024-10": 0,
+      "2024-11": 0,
+      "2024-12": 0,
+      "2025-01": 0,
+      "2025-02": 0,
+      "2025-03": 0,
+      "2025-04": 0,
+      "2025-05": 0,
+      "2025-06": 0,
+      "2025-07": 0,
+      "2025-08": 0
+    },
+    "resources_downloads": 21945,
+    "reuses": 21,
+    "reuses_by_months": {
+      "2024-08": 0,
+      "2024-09": 0,
+      "2024-10": 0,
+      "2024-11": 0,
+      "2024-12": 0,
+      "2025-01": 0,
+      "2025-02": 0,
+      "2025-03": 0,
+      "2025-04": 0,
+      "2025-05": 0,
+      "2025-06": 0,
+      "2025-07": 0,
+      "2025-08": 0
+    },
+    "views": 14798
+  },
+  "organization": {
+    "acronym": null,
+    "badges": [
+      {
+        "kind": "public-service"
+      },
+      {
+        "kind": "certified"
+      }
+    ],
+    "class": "Organization",
+    "id": "540f9a01a3a72928898af4a3",
+    "logo": "https://udata-avatars.s3.rbx.io.cloud.ovh.net/b2/24e8bb86d94820a1c0fb43a55b9722.png",
+    "logo_thumbnail": "https://udata-avatars.s3.rbx.io.cloud.ovh.net/b2/24e8bb86d94820a1c0fb43a55b9722-100.png",
+    "name": "Conseil constitutionnel",
+    "page": "https://www.data.gouv.fr/organizations/conseil-constitutionnel",
+    "permissions": {
+      "delete": false,
+      "edit": false,
+      "harvest": false,
+      "members": false,
+      "private": false
+    },
+    "slug": "conseil-constitutionnel",
+    "uri": "https://www.data.gouv.fr/api/1/organizations/conseil-constitutionnel/"
+  },
+  "owner": null,
+  "page": "https://www.data.gouv.fr/datasets/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022",
+  "permissions": {
+    "delete": false,
+    "edit": false,
+    "edit_resources": false
+  },
+  "private": false,
+  "quality": {
+    "all_resources_available": true,
+    "dataset_description_quality": true,
+    "has_open_format": true,
+    "has_resources": true,
+    "license": true,
+    "resources_documentation": true,
+    "score": 0.8888888888888888,
+    "spatial": true,
+    "temporal_coverage": true,
+    "update_frequency": true,
+    "update_fulfilled_in_time": false
+  },
+  "resources": [
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "b6d4f770c5adc1dd2b69a23271cb6dd878af2d1c"
+      },
+      "created_at": "2022-03-07T18:33:54.747000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:checksum": "b6d4f770c5adc1dd2b69a23271cb6dd878af2d1c",
+        "analysis:content-length": 3520700,
+        "analysis:last-modified-at": "2022-03-07T17:33:54+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/json",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T07:53:15.907862+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41640144,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 3520700,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "86f38ab2-4d61-457c-88c5-31473becbc6c",
+      "internal": {
+        "created_at_internal": "2022-03-07T18:33:54.747000+00:00",
+        "last_modified_internal": "2022-03-07T18:34:04.394000+00:00"
+      },
+      "last_modified": "2022-03-07T18:34:04.394000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/86f38ab2-4d61-457c-88c5-31473becbc6c",
+      "metrics": {
+        "views": 13285
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 07 mars 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220307-183354/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "c5c639f715b323105e138bfcdccc3a2f661054f8"
+      },
+      "created_at": "2022-03-07T18:33:33.247000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XLSX",
+      "extras": {
+        "analysis:checksum": "c5c639f715b323105e138bfcdccc3a2f661054f8",
+        "analysis:content-length": 653438,
+        "analysis:last-modified-at": "2022-03-07T17:33:33+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T04:42:32.040185+00:00",
+        "analysis:parsing:parsing_table": "10e16f4323f647d2fc8d41c2c311a243",
+        "analysis:parsing:started_at": "2024-10-23T04:42:26.357498+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-18T03:46:59.618312+00:00",
+        "check:headers:content-length": 653438,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41980106,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 653438,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "7f741f74-6f5d-4170-9e94-455ab241a8d2",
+      "internal": {
+        "created_at_internal": "2022-03-07T18:33:33.247000+00:00",
+        "last_modified_internal": "2022-03-07T18:33:44.902000+00:00"
+      },
+      "last_modified": "2022-03-07T18:33:44.902000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/7f741f74-6f5d-4170-9e94-455ab241a8d2",
+      "metrics": {
+        "views": 1099
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/7f741f74-6f5d-4170-9e94-455ab241a8d2",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 07 mars 2022 au format XLSX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220307-183333/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "637d2b29a5dd033bce8772a80385a3c09e64cbc6"
+      },
+      "created_at": "2022-03-07T18:33:09.244000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "637d2b29a5dd033bce8772a80385a3c09e64cbc6",
+        "analysis:content-length": 1171235,
+        "analysis:last-modified-at": "2022-03-07T17:33:09+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 23:30:41.452002+02",
+        "analysis:parsing:parsing_table": "17f17b35e5dbebfa22aebe0daf97a345",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T13:07:35.520365+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41681483,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 1171235,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "f943a1a9-fc14-47e9-9e22-0ec5c50f5fe2",
+      "internal": {
+        "created_at_internal": "2022-03-07T18:33:09.244000+00:00",
+        "last_modified_internal": "2022-03-07T18:33:26.516000+00:00"
+      },
+      "last_modified": "2022-03-07T18:33:26.516000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/f943a1a9-fc14-47e9-9e22-0ec5c50f5fe2",
+      "metrics": {
+        "views": 1082
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/f943a1a9-fc14-47e9-9e22-0ec5c50f5fe2",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 07 mars 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220307-183308/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "e40ab2160c7677ac395722dd84e6f0df90258a4f"
+      },
+      "created_at": "2022-03-03T19:21:08.837000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-03-03T18:21:08+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-14T15:25:04.118030+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41537745,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 3340667,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "39584e60-7df6-4691-8ec8-4710dd8b4304",
+      "internal": {
+        "created_at_internal": "2022-03-03T19:21:08.837000+00:00",
+        "last_modified_internal": "2022-03-03T19:21:20.365000+00:00"
+      },
+      "last_modified": "2022-03-03T19:21:20.365000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/39584e60-7df6-4691-8ec8-4710dd8b4304",
+      "metrics": {
+        "views": 263
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 03 mars 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220303-192108/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "6d0c4c00786aa549069691506c45bd337dd8c97c"
+      },
+      "created_at": "2022-03-03T19:20:48.511000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XSLX",
+      "extras": {
+        "analysis:checksum": "6d0c4c00786aa549069691506c45bd337dd8c97c",
+        "analysis:content-length": 647221,
+        "analysis:last-modified-at": "2022-03-03T18:20:48+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T06:00:03.177037+00:00",
+        "analysis:parsing:parsing_table": "0292a8a1b7b47eb71c653f6a4140c0db",
+        "analysis:parsing:started_at": "2024-10-23T05:59:53.315025+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-16T01:08:00.357203+00:00",
+        "check:headers:content-length": 647221,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41766599,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 647221,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "73e10072-5223-4866-bec3-547615abb1ab",
+      "internal": {
+        "created_at_internal": "2022-03-03T19:20:48.511000+00:00",
+        "last_modified_internal": "2022-03-03T19:20:59.298000+00:00"
+      },
+      "last_modified": "2022-03-03T19:20:59.298000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/73e10072-5223-4866-bec3-547615abb1ab",
+      "metrics": {
+        "views": 402
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/73e10072-5223-4866-bec3-547615abb1ab",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 03 mars 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220303-192048/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "08b654c718ea56318b044cc62debf5fbef5f6fbe"
+      },
+      "created_at": "2022-03-03T19:20:23.040000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV\n",
+      "extras": {
+        "analysis:checksum": "08b654c718ea56318b044cc62debf5fbef5f6fbe",
+        "analysis:content-length": 1071582,
+        "analysis:last-modified-at": "2022-03-03T18:20:22+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-29 14:24:28.271305+02",
+        "analysis:parsing:parsing_table": "ff6f91f73ad5bab1e222d34ff3e28632",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-16T00:43:50.858356+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41762417,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 1071582,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "a6f0a65c-720c-4297-869e-cb8cfbc10ca9",
+      "internal": {
+        "created_at_internal": "2022-03-03T19:20:23.040000+00:00",
+        "last_modified_internal": "2022-03-03T19:20:37.907000+00:00"
+      },
+      "last_modified": "2022-03-03T19:20:37.907000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/a6f0a65c-720c-4297-869e-cb8cfbc10ca9",
+      "metrics": {
+        "views": 305
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/a6f0a65c-720c-4297-869e-cb8cfbc10ca9",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 03 mars 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220303-192022/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "a7c0d453a689f7939db8e9e1d5c7853c5513735c"
+      },
+      "created_at": "2022-03-01T18:09:39.406000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-03-01T17:09:39+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T02:35:40.895849+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41603645,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 3085179,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "92b9f9d7-4743-421a-95d0-592f0eecb9b9",
+      "internal": {
+        "created_at_internal": "2022-03-01T18:09:39.406000+00:00",
+        "last_modified_internal": "2022-03-01T18:10:04.280000+00:00"
+      },
+      "last_modified": "2022-03-01T18:10:04.280000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/92b9f9d7-4743-421a-95d0-592f0eecb9b9",
+      "metrics": {
+        "views": 194
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 01 mars 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220301-180939/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "cc5a16589965c4f77228226b9be8315bba36e5e9"
+      },
+      "created_at": "2022-03-01T18:09:08.604000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XSLX",
+      "extras": {
+        "analysis:last-modified-at": "2022-03-01T17:09:08+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-14T18:19:02.801517+00:00",
+        "check:headers:content-length": 597777,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41553878,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 597777,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "d3526df4-ef9c-405e-89a6-01cc09a8f431",
+      "internal": {
+        "created_at_internal": "2022-03-01T18:09:08.604000+00:00",
+        "last_modified_internal": "2022-03-01T18:09:23.450000+00:00"
+      },
+      "last_modified": "2022-03-01T18:09:23.450000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/d3526df4-ef9c-405e-89a6-01cc09a8f431",
+      "metrics": {
+        "views": 232
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 01 mars 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220301-180908/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "e2284f00f8e84d2e785baab7a64e98aaaac03ac8"
+      },
+      "created_at": "2022-03-01T18:08:36.055000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "e2284f00f8e84d2e785baab7a64e98aaaac03ac8",
+        "analysis:content-length": 987995,
+        "analysis:last-modified-at": "2022-03-01T17:08:35+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 12:48:42.141103+02",
+        "analysis:parsing:parsing_table": "2031c79d22d350f46a591ba009cc4a34",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T09:13:29.961063+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41649773,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 987995,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "ec9a257b-b62a-4c95-9a32-e3f0b54898d0",
+      "internal": {
+        "created_at_internal": "2022-03-01T18:08:36.055000+00:00",
+        "last_modified_internal": "2022-03-01T18:08:57.826000+00:00"
+      },
+      "last_modified": "2022-03-01T18:08:57.826000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/ec9a257b-b62a-4c95-9a32-e3f0b54898d0",
+      "metrics": {
+        "views": 398
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/ec9a257b-b62a-4c95-9a32-e3f0b54898d0",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 01 mars 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220301-180835/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "7ad09b6c814f248426764f887aa54056c28f0a20"
+      },
+      "created_at": "2022-02-25T11:16:19.171000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XSLX",
+      "extras": {
+        "analysis:checksum": "7ad09b6c814f248426764f887aa54056c28f0a20",
+        "analysis:content-length": 520261,
+        "analysis:last-modified-at": "2022-02-25T10:16:19+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-22T17:18:26.369642+00:00",
+        "analysis:parsing:parsing_table": "5002fe1d02afd280b28f083d9a001f10",
+        "analysis:parsing:started_at": "2024-10-22T17:18:18.973978+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T04:56:25.743027+00:00",
+        "check:headers:content-length": 520261,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41617853,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 520261,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "cf9f3743-dfdc-4e49-8f3b-53b2f56bd464",
+      "internal": {
+        "created_at_internal": "2022-02-25T11:16:19.171000+00:00",
+        "last_modified_internal": "2022-02-25T11:16:30.681000+00:00"
+      },
+      "last_modified": "2022-02-25T11:16:30.681000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/cf9f3743-dfdc-4e49-8f3b-53b2f56bd464",
+      "metrics": {
+        "views": 211
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/cf9f3743-dfdc-4e49-8f3b-53b2f56bd464",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 24 février 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220225-111618/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "8f04413db7cd783d40530edb4c207eea9b8e3f00"
+      },
+      "created_at": "2022-02-25T11:15:55.826000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-25T10:15:55+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T19:10:38.145276+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41726057,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 2679805,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "c5a3c3d0-e55f-4b5b-b148-0996929bf071",
+      "internal": {
+        "created_at_internal": "2022-02-25T11:15:55.826000+00:00",
+        "last_modified_internal": "2022-02-25T11:16:07.068000+00:00"
+      },
+      "last_modified": "2022-02-25T11:16:07.068000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/c5a3c3d0-e55f-4b5b-b148-0996929bf071",
+      "metrics": {
+        "views": 73
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 24 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220225-111555/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "6f9b3cae3f6daf701debbfcecefdfece8556a2d0"
+      },
+      "created_at": "2022-02-25T11:15:24.799000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "6f9b3cae3f6daf701debbfcecefdfece8556a2d0",
+        "analysis:content-length": 854812,
+        "analysis:last-modified-at": "2022-02-25T10:15:24+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-29 00:14:38.082509+02",
+        "analysis:parsing:parsing_table": "a0ffc935c7033f98b393b2ed9d98e444",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T18:04:40.719937+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41715264,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 854812,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "4e96ebe9-d29d-4ffc-aefd-b17285fe1f46",
+      "internal": {
+        "created_at_internal": "2022-02-25T11:15:24.799000+00:00",
+        "last_modified_internal": "2022-02-25T11:15:41.767000+00:00"
+      },
+      "last_modified": "2022-02-25T11:15:41.767000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/4e96ebe9-d29d-4ffc-aefd-b17285fe1f46",
+      "metrics": {
+        "views": 101
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/4e96ebe9-d29d-4ffc-aefd-b17285fe1f46",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 24 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220225-111524/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "bab99da0fe2710eab1201261d4f2e0d5e6341618"
+      },
+      "created_at": "2022-02-22T17:36:17.628000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:checksum": "bab99da0fe2710eab1201261d4f2e0d5e6341618",
+        "analysis:content-length": 2507696,
+        "analysis:last-modified-at": "2022-02-22T16:36:17+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T09:32:02.021002+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41652087,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 2507696,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "3a52d628-fa31-49ce-96ac-74fdf8c1301b",
+      "internal": {
+        "created_at_internal": "2022-02-22T17:36:17.628000+00:00",
+        "last_modified_internal": "2022-02-22T17:36:29.178000+00:00"
+      },
+      "last_modified": "2022-02-22T17:36:29.178000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/3a52d628-fa31-49ce-96ac-74fdf8c1301b",
+      "metrics": {
+        "views": 74
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 22 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220222-173617/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "d24b4b985bdd3da0c91af43866cba42f95a83c98"
+      },
+      "created_at": "2022-02-22T17:35:49.508000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XSLX",
+      "extras": {
+        "analysis:checksum": "d24b4b985bdd3da0c91af43866cba42f95a83c98",
+        "analysis:content-length": 486863,
+        "analysis:last-modified-at": "2022-02-22T16:35:49+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-22T17:29:18.949839+00:00",
+        "analysis:parsing:parsing_table": "a252061c64d9fe5ef88156822b6692cd",
+        "analysis:parsing:started_at": "2024-10-22T17:29:12.694736+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T10:34:26.242305+00:00",
+        "check:headers:content-length": 486863,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41660844,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 486863,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "e69da773-d3eb-40ed-a321-65e18a34ee90",
+      "internal": {
+        "created_at_internal": "2022-02-22T17:35:49.508000+00:00",
+        "last_modified_internal": "2022-02-22T17:36:05.308000+00:00"
+      },
+      "last_modified": "2022-02-22T17:36:05.308000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/e69da773-d3eb-40ed-a321-65e18a34ee90",
+      "metrics": {
+        "views": 296
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/e69da773-d3eb-40ed-a321-65e18a34ee90",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 22 février 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220222-173549/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "048d2be78a1007a43d5188d4271811322cd31fa6"
+      },
+      "created_at": "2022-02-22T17:35:24.044000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "048d2be78a1007a43d5188d4271811322cd31fa6",
+        "analysis:content-length": 798324,
+        "analysis:last-modified-at": "2022-02-22T16:35:23+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 17:52:06.704614+02",
+        "analysis:parsing:parsing_table": "28b0e3869090b498a1deb72c2420ed56",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T03:56:12.409474+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41611666,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 798324,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "a674aacc-903c-4068-a103-531b8461cf7d",
+      "internal": {
+        "created_at_internal": "2022-02-22T17:35:24.044000+00:00",
+        "last_modified_internal": "2022-02-22T17:35:39.426000+00:00"
+      },
+      "last_modified": "2022-02-22T17:35:39.426000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/a674aacc-903c-4068-a103-531b8461cf7d",
+      "metrics": {
+        "views": 303
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/a674aacc-903c-4068-a103-531b8461cf7d",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 22 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220222-173523/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "23ff23bac5174ed725c7e62a3bfa0e2b2214fcb2"
+      },
+      "created_at": "2022-02-18T09:00:30.782000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-18T08:00:30+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-14T18:56:34.479398+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41558962,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 2257709,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "171ddf6a-8380-4852-b0e5-fd13f821114f",
+      "internal": {
+        "created_at_internal": "2022-02-18T09:00:30.782000+00:00",
+        "last_modified_internal": "2022-02-18T09:00:42.211000+00:00"
+      },
+      "last_modified": "2022-02-18T09:00:42.211000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/171ddf6a-8380-4852-b0e5-fd13f821114f",
+      "metrics": {
+        "views": 81
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 17 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220218-090030/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "ecb6e38b532e8358dc2e6d0fd20775b19bec8a30"
+      },
+      "created_at": "2022-02-18T09:00:04.220000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XSLX",
+      "extras": {
+        "analysis:checksum": "ecb6e38b532e8358dc2e6d0fd20775b19bec8a30",
+        "analysis:content-length": 439265,
+        "analysis:last-modified-at": "2022-02-18T08:00:04+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T03:04:31.467560+00:00",
+        "analysis:parsing:parsing_table": "95d30856c2166908032438c53dbbc86c",
+        "analysis:parsing:started_at": "2024-10-23T03:04:24.241068+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T20:05:35.446062+00:00",
+        "check:headers:content-length": 439265,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41734737,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 439265,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "d9587aac-1fb5-4bc9-9039-de720b64978b",
+      "internal": {
+        "created_at_internal": "2022-02-18T09:00:04.220000+00:00",
+        "last_modified_internal": "2022-02-18T09:00:18.172000+00:00"
+      },
+      "last_modified": "2022-02-18T09:00:18.172000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/d9587aac-1fb5-4bc9-9039-de720b64978b",
+      "metrics": {
+        "views": 254
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/d9587aac-1fb5-4bc9-9039-de720b64978b",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 17 février 2022 au format XSLX ",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220218-090003/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "046c08239756ff5068917af79657ceb761fb1c91"
+      },
+      "created_at": "2022-02-18T08:59:43.127000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "046c08239756ff5068917af79657ceb761fb1c91",
+        "analysis:content-length": 717308,
+        "analysis:last-modified-at": "2022-02-18T07:59:43+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-29 10:27:22.611214+02",
+        "analysis:parsing:parsing_table": "6a9f3f143c21e6655a2e00e59eeb77e1",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-14T14:42:52.185423+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41534911,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 717308,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "c93256d6-594d-4511-bd66-a337f3fe9df4",
+      "internal": {
+        "created_at_internal": "2022-02-18T08:59:43.127000+00:00",
+        "last_modified_internal": "2022-02-18T08:59:56.284000+00:00"
+      },
+      "last_modified": "2022-02-18T08:59:56.284000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/c93256d6-594d-4511-bd66-a337f3fe9df4",
+      "metrics": {
+        "views": 339
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/c93256d6-594d-4511-bd66-a337f3fe9df4",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 17 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220218-085942/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "06e54b857636790e5474cf93f137b97273e10f18"
+      },
+      "created_at": "2022-02-15T17:11:11.376000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XSLX",
+      "extras": {
+        "analysis:checksum": "06e54b857636790e5474cf93f137b97273e10f18",
+        "analysis:content-length": 409165,
+        "analysis:last-modified-at": "2022-02-15T16:11:11+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T05:15:49.711404+00:00",
+        "analysis:parsing:parsing_table": "ff9547a30edac2f6efb8592224737d10",
+        "analysis:parsing:started_at": "2024-10-23T05:15:43.406858+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T08:05:45.448816+00:00",
+        "check:headers:content-length": 409165,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41641718,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 409165,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "5385cd86-2ffd-49b1-9df6-df81c7818ed7",
+      "internal": {
+        "created_at_internal": "2022-02-15T17:11:11.376000+00:00",
+        "last_modified_internal": "2022-02-15T17:11:24.343000+00:00"
+      },
+      "last_modified": "2022-02-15T17:11:24.343000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/5385cd86-2ffd-49b1-9df6-df81c7818ed7",
+      "metrics": {
+        "views": 257
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/5385cd86-2ffd-49b1-9df6-df81c7818ed7",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 15 février 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220215-171111/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "1b598a46d125166431b23c2d526f8eedbeb4c4ee"
+      },
+      "created_at": "2022-02-15T17:10:43.917000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-15T16:10:43+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T11:16:23.317151+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41667099,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 2102132,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "b510beda-e154-48ca-a8a1-15ca0b6f9bd4",
+      "internal": {
+        "created_at_internal": "2022-02-15T17:10:43.917000+00:00",
+        "last_modified_internal": "2022-02-15T17:11:05.191000+00:00"
+      },
+      "last_modified": "2022-02-15T17:11:05.191000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/b510beda-e154-48ca-a8a1-15ca0b6f9bd4",
+      "metrics": {
+        "views": 88
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 15 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220215-171043/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "c83471c3876e45390bd24b725eba0f255ba8037f"
+      },
+      "created_at": "2022-02-15T17:10:17.515000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "c83471c3876e45390bd24b725eba0f255ba8037f",
+        "analysis:content-length": 667311,
+        "analysis:last-modified-at": "2022-02-15T16:10:17+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-29 23:58:54.46088+02",
+        "analysis:parsing:parsing_table": "d2fd387f84c160cd0cf3c8851d07d2bf",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T20:23:49.589659+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41737131,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 667311,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "307dbc5d-0907-47e9-a3dc-2836cc906b1c",
+      "internal": {
+        "created_at_internal": "2022-02-15T17:10:17.515000+00:00",
+        "last_modified_internal": "2022-02-15T17:10:34.590000+00:00"
+      },
+      "last_modified": "2022-02-15T17:10:34.590000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/307dbc5d-0907-47e9-a3dc-2836cc906b1c",
+      "metrics": {
+        "views": 96
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/307dbc5d-0907-47e9-a3dc-2836cc906b1c",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 15 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220215-171017/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "ef6f6102dfd62e9584bbb64ef57d02e4031befbb"
+      },
+      "created_at": "2022-02-10T17:45:03.086000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "ef6f6102dfd62e9584bbb64ef57d02e4031befbb",
+        "analysis:content-length": 532231,
+        "analysis:last-modified-at": "2022-02-10T16:45:03+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 20:13:53.362927+02",
+        "analysis:parsing:parsing_table": "b9129322a8e7c1225d86ce9490e0b70c",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-14T23:05:35.734395+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41580836,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 532231,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "10e3347a-84e2-4b97-9487-89e28c1dc655",
+      "internal": {
+        "created_at_internal": "2022-02-10T17:45:03.086000+00:00",
+        "last_modified_internal": "2022-02-10T17:45:22.126000+00:00"
+      },
+      "last_modified": "2022-02-10T17:45:22.126000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/10e3347a-84e2-4b97-9487-89e28c1dc655",
+      "metrics": {
+        "views": 116
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/10e3347a-84e2-4b97-9487-89e28c1dc655",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 10 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220210-174502/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "69a2fcbcd89021a7e4c0a971e588d5e982042c67"
+      },
+      "created_at": "2022-02-10T17:44:27.282000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XLSX",
+      "extras": {
+        "analysis:checksum": "69a2fcbcd89021a7e4c0a971e588d5e982042c67",
+        "analysis:content-length": 296809,
+        "analysis:last-modified-at": "2022-02-10T16:44:27+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T11:54:01.900968+00:00",
+        "analysis:parsing:parsing_table": "7a1d0937ab92178957e7c59d45771327",
+        "analysis:parsing:started_at": "2024-10-23T11:53:58.085712+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-16T03:44:00.308245+00:00",
+        "check:headers:content-length": 296809,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41783015,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 296809,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "fcb7887a-8332-457f-b852-2d2c3c9f294d",
+      "internal": {
+        "created_at_internal": "2022-02-10T17:44:27.282000+00:00",
+        "last_modified_internal": "2022-02-10T17:44:55.803000+00:00"
+      },
+      "last_modified": "2022-02-10T17:44:55.803000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/fcb7887a-8332-457f-b852-2d2c3c9f294d",
+      "metrics": {
+        "views": 77
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/fcb7887a-8332-457f-b852-2d2c3c9f294d",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 10 février 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220210-174427/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "64bd5a7af0bb695e748927d3503f02268eac998f"
+      },
+      "created_at": "2022-02-10T17:44:01.063000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-10T16:44:00+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-14T23:13:27.240682+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41581303,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 1619589,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "9a32bfb8-2c44-4358-8897-6e0fcbe5e757",
+      "internal": {
+        "created_at_internal": "2022-02-10T17:44:01.063000+00:00",
+        "last_modified_internal": "2022-02-10T17:44:19.385000+00:00"
+      },
+      "last_modified": "2022-02-10T17:44:19.385000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/9a32bfb8-2c44-4358-8897-6e0fcbe5e757",
+      "metrics": {
+        "views": 75
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 10 février 2022 au format JSON ",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220210-174400/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "e07b0d5d66ae0e1c34805e001781787e1ad8762d"
+      },
+      "created_at": "2022-02-08T17:10:35.697000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-08T16:10:35+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-16T04:12:48.966168+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41785811,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 1321129,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "4760113d-35a1-4471-87f7-517e7d8b95cb",
+      "internal": {
+        "created_at_internal": "2022-02-08T17:10:35.697000+00:00",
+        "last_modified_internal": "2022-02-08T17:10:59.012000+00:00"
+      },
+      "last_modified": "2022-02-08T17:10:59.012000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/4760113d-35a1-4471-87f7-517e7d8b95cb",
+      "metrics": {
+        "views": 79
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 8 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220208-171035/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "30ab123b15617cb5373039617e5403f7b8839b30"
+      },
+      "created_at": "2022-02-08T17:10:03.250000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XLSX",
+      "extras": {
+        "analysis:checksum": "30ab123b15617cb5373039617e5403f7b8839b30",
+        "analysis:content-length": 242204,
+        "analysis:last-modified-at": "2022-02-08T16:10:03+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T02:02:12.818190+00:00",
+        "analysis:parsing:parsing_table": "e0284a45baf962bd1306706676dabccb",
+        "analysis:parsing:started_at": "2024-10-23T02:02:08.519963+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T08:18:57.778599+00:00",
+        "check:headers:content-length": 242204,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41643254,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 242204,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "f07e2f4a-00aa-47cf-b648-528a00703a81",
+      "internal": {
+        "created_at_internal": "2022-02-08T17:10:03.250000+00:00",
+        "last_modified_internal": "2022-02-08T17:10:25.035000+00:00"
+      },
+      "last_modified": "2022-02-08T17:10:25.035000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/f07e2f4a-00aa-47cf-b648-528a00703a81",
+      "metrics": {
+        "views": 193
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/f07e2f4a-00aa-47cf-b648-528a00703a81",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 8 février 2022 au format XLSX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220208-171003/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "451711baeadf068e1c4e0b59f38d6e1201368f91"
+      },
+      "created_at": "2022-02-08T17:09:19.613000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "451711baeadf068e1c4e0b59f38d6e1201368f91",
+        "analysis:content-length": 432459,
+        "analysis:last-modified-at": "2022-02-08T16:09:19+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-29 10:28:33.50207+02",
+        "analysis:parsing:parsing_table": "7de225d84d9bc228d9f3e586577df25d",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-16T00:34:04.557546+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41760867,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 432459,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "bb9b4c36-8baa-4c93-b7e3-da987c5b599a",
+      "internal": {
+        "created_at_internal": "2022-02-08T17:09:19.613000+00:00",
+        "last_modified_internal": "2022-02-08T17:09:55.211000+00:00"
+      },
+      "last_modified": "2022-02-08T17:09:55.211000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/bb9b4c36-8baa-4c93-b7e3-da987c5b599a",
+      "metrics": {
+        "views": 218
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/bb9b4c36-8baa-4c93-b7e3-da987c5b599a",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 8 février 2022 au format CSV ",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220208-170919/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "637d2b29a5dd033bce8772a80385a3c09e64cbc6"
+      },
+      "created_at": "2022-02-03T17:21:35.719000+00:00",
+      "description": "Lien stable des derniers parrainages au format CSV",
+      "extras": {
+        "analysis:checksum": "637d2b29a5dd033bce8772a80385a3c09e64cbc6",
+        "analysis:content-length": 1171235,
+        "analysis:last-modified-at": "2022-03-07T17:34:19+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 22:50:14.147477+02",
+        "analysis:parsing:parsing_table": "4138d21dec7e5d11f0562d6656da66c1",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T20:15:43.503277+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41736144,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 1171235,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "3e34f95f-917f-4d34-9524-eec88284bfd1",
+      "internal": {
+        "created_at_internal": "2022-02-03T17:21:35.719000+00:00",
+        "last_modified_internal": "2022-03-07T18:34:26.124000+00:00"
+      },
+      "last_modified": "2022-03-07T18:34:26.124000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/3e34f95f-917f-4d34-9524-eec88284bfd1",
+      "metrics": {
+        "views": 210
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/3e34f95f-917f-4d34-9524-eec88284bfd1",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "derniers -parrainages-connus.csv",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220307-183418/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "5de9abebcccb9a47a628cc5fc6f5738c4c2af6e2"
+      },
+      "created_at": "2022-02-03T17:19:28.388000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-03T16:19:28+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T22:34:25.214607+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41748882,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 536216,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "6a44c409-b79f-49c2-acdb-9f5ab57c5929",
+      "internal": {
+        "created_at_internal": "2022-02-03T17:19:28.388000+00:00",
+        "last_modified_internal": "2022-02-03T17:19:45.709000+00:00"
+      },
+      "last_modified": "2022-02-03T17:19:45.709000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/6a44c409-b79f-49c2-acdb-9f5ab57c5929",
+      "metrics": {
+        "views": 260
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 3 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220203-171928/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "527c0e7faa1acc2a7d4c115b8d6b00e55e8b55dc"
+      },
+      "created_at": "2022-02-03T17:18:45.405000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "527c0e7faa1acc2a7d4c115b8d6b00e55e8b55dc",
+        "analysis:content-length": 174948,
+        "analysis:last-modified-at": "2022-02-03T16:18:45+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 10:39:11.526916+02",
+        "analysis:parsing:parsing_table": "9eafcda9bf8656679cc4d0dda83ad59d",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T11:08:02.031976+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41665828,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 174948,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "f424131a-9a98-43a7-910c-c4f7781ac07f",
+      "internal": {
+        "created_at_internal": "2022-02-03T17:18:45.405000+00:00",
+        "last_modified_internal": "2022-02-03T17:19:12.467000+00:00"
+      },
+      "last_modified": "2022-02-03T17:19:12.467000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/f424131a-9a98-43a7-910c-c4f7781ac07f",
+      "metrics": {
+        "views": 273
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/f424131a-9a98-43a7-910c-c4f7781ac07f",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 3 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220203-171845/parrainagestotal.csv"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "3be663e3f429f03ce9934e5c240b5b0874462872"
+      },
+      "created_at": "2022-02-03T17:18:04.081000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XLSX",
+      "extras": {
+        "analysis:checksum": "3be663e3f429f03ce9934e5c240b5b0874462872",
+        "analysis:content-length": 25846,
+        "analysis:last-modified-at": "2022-02-03T16:18:04+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T12:53:28.553492+00:00",
+        "analysis:parsing:parsing_table": "0926e2051b617a19003427e6648d1c04",
+        "analysis:parsing:started_at": "2024-10-23T12:53:27.813582+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T23:26:49.511280+00:00",
+        "check:headers:content-length": 25846,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41754149,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 25846,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "e47b397d-f1ed-4cce-81bd-8b1fecb8d1e5",
+      "internal": {
+        "created_at_internal": "2022-02-03T17:18:04.081000+00:00",
+        "last_modified_internal": "2022-02-03T17:18:27.632000+00:00"
+      },
+      "last_modified": "2022-02-03T17:18:27.632000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/e47b397d-f1ed-4cce-81bd-8b1fecb8d1e5",
+      "metrics": {
+        "views": 191
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/e47b397d-f1ed-4cce-81bd-8b1fecb8d1e5",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 3 février 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220203-171803/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "3be663e3f429f03ce9934e5c240b5b0874462872"
+      },
+      "created_at": "2022-02-01T18:30:50.559000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format XLSX",
+      "extras": {
+        "analysis:checksum": "3be663e3f429f03ce9934e5c240b5b0874462872",
+        "analysis:content-length": 25846,
+        "analysis:last-modified-at": "2022-02-01T17:30:50+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "analysis:parsing:finished_at": "2024-10-23T05:58:09.968332+00:00",
+        "analysis:parsing:parsing_table": "8ea6eda5f62f99de1bc5fd39266eeef4",
+        "analysis:parsing:started_at": "2024-10-23T05:58:08.707956+00:00",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T21:48:14.247023+00:00",
+        "check:headers:content-length": 25846,
+        "check:headers:content-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "check:id": 41744781,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 25846,
+      "filetype": "file",
+      "format": "xlsx",
+      "harvest": null,
+      "id": "91dd3346-a7c6-4881-81db-020a379877d2",
+      "internal": {
+        "created_at_internal": "2022-02-01T18:30:50.559000+00:00",
+        "last_modified_internal": "2022-02-01T18:33:48.396000+00:00"
+      },
+      "last_modified": "2022-02-01T18:33:48.396000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/91dd3346-a7c6-4881-81db-020a379877d2",
+      "metrics": {
+        "views": 258
+      },
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/91dd3346-a7c6-4881-81db-020a379877d2",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 1 février 2022 au format XSLX",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220201-183050/parrainagestotal.xlsx"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "aeb56ab3a1c202eccbffce8612cfe651071d7d20"
+      },
+      "created_at": "2022-02-01T18:29:39.220000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format JSON",
+      "extras": {
+        "analysis:last-modified-at": "2022-02-01T17:29:39+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T18:06:18.227157+00:00",
+        "check:headers:content-type": "application/json",
+        "check:id": 41715498,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 81174,
+      "filetype": "file",
+      "format": "json",
+      "harvest": null,
+      "id": "4b261e7d-b901-4f2a-af3a-195862de49fd",
+      "internal": {
+        "created_at_internal": "2022-02-01T18:29:39.220000+00:00",
+        "last_modified_internal": "2022-02-01T18:33:37.042000+00:00"
+      },
+      "last_modified": "2022-02-01T18:33:37.042000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/4b261e7d-b901-4f2a-af3a-195862de49fd",
+      "metrics": {
+        "views": 308
+      },
+      "mime": "application/json",
+      "preview_url": null,
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 1 février 2022 au format JSON",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220201-182939/parrainagestotal.json"
+    },
+    {
+      "checksum": {
+        "type": "sha1",
+        "value": "a0ce8bb83cef965c14e22905b87f0406f9005127"
+      },
+      "created_at": "2022-02-01T18:28:15.313000+00:00",
+      "description": "Liste finale des parrainages publiés par le Conseil constitutionnel au format CSV",
+      "extras": {
+        "analysis:checksum": "a0ce8bb83cef965c14e22905b87f0406f9005127",
+        "analysis:content-length": 26623,
+        "analysis:last-modified-at": "2022-02-01T17:28:15+00:00",
+        "analysis:last-modified-detection": "last-modified-header",
+        "analysis:mime-type": "text/plain",
+        "analysis:parsing:finished_at": "2023-08-30 22:50:38.751311+02",
+        "analysis:parsing:parsing_table": "3c14141a4e4f22d864a9faf0cdbd06b8",
+        "check:available": true,
+        "check:cors:allow-credentials": "true",
+        "check:cors:allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range,sentry-trace,baggage",
+        "check:cors:allow-methods": "GET, OPTIONS",
+        "check:cors:allow-origin": "*",
+        "check:cors:max-age": "1728000",
+        "check:cors:status": 204,
+        "check:date": "2026-02-15T01:18:50.956194+00:00",
+        "check:headers:content-type": "text/csv",
+        "check:id": 41595385,
+        "check:status": 200,
+        "check:timeout": false
+      },
+      "filesize": 26623,
+      "filetype": "file",
+      "format": "csv",
+      "harvest": null,
+      "id": "e2c60549-1a7e-41dd-ba98-a24cc1553d9e",
+      "internal": {
+        "created_at_internal": "2022-02-01T18:28:15.313000+00:00",
+        "last_modified_internal": "2022-02-01T18:33:58.220000+00:00"
+      },
+      "last_modified": "2022-02-01T18:33:58.220000+00:00",
+      "latest": "https://www.data.gouv.fr/api/1/datasets/r/e2c60549-1a7e-41dd-ba98-a24cc1553d9e",
+      "metrics": {
+        "views": 216
+      },
+      "mime": "text/csv",
+      "preview_url": "https://explore.data.gouv.fr/fr/resources/e2c60549-1a7e-41dd-ba98-a24cc1553d9e",
+      "schema": {
+        "name": null,
+        "url": null,
+        "version": null
+      },
+      "title": "Les parrainages au 1 février 2022 au format CSV",
+      "type": "main",
+      "url": "https://static.data.gouv.fr/resources/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/20220201-182815/parrainagestotal.csv"
+    }
+  ],
+  "schema": null,
+  "slug": "parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022",
+  "spatial": {
+    "geom": null,
+    "granularity": "fr:departement",
+    "zones": [
+      "country:fr"
+    ]
+  },
+  "tags": [
+    "candidats",
+    "conseil",
+    "conseil-constitutionnel",
+    "constitution",
+    "constitutionnel",
+    "election-presidentielle",
+    "elections",
+    "parrainages",
+    "presidentielle",
+    "presidentielle2022"
+  ],
+  "temporal_coverage": {
+    "end": "2022-03-04",
+    "start": "2022-01-27"
+  },
+  "title": "Parrainages des candidats à l'élection présidentielle française de 2022",
+  "uri": "https://www.data.gouv.fr/api/1/datasets/parrainages-des-candidats-a-lelection-presidentielle-francaise-de-2022/"
+}
