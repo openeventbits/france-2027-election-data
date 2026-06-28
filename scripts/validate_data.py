@@ -13,6 +13,7 @@ EXPECTED_COLUMNS = {
     "polls_metadata.csv": ["poll_id", "institute", "publication_date", "source_id"],
     "poll_candidate_results.csv": ["poll_result_id", "poll_id", "candidate_id", "poll_value", "source_id"],
     "source_feeds.csv": ["feed_id", "source_id", "feed_name", "feed_type", "url", "collection_method", "automation_stage", "status", "refresh_cadence", "review_required"],
+    "reference_datasets.csv": ["reference_dataset_id", "title", "producer", "source_id", "url", "topic", "reference_type", "status", "last_verified_at"],
 }
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -27,6 +28,7 @@ VALID_FEED_TYPE = {"source_page", "legal_page", "catalog", "api"}
 VALID_AUTOMATION_STAGE = {"not_automated", "planned", "staging", "active"}
 VALID_REFRESH_CADENCE = {"hourly", "daily", "weekly", "monthly", "manual"}
 VALID_BOOLEAN = {"true", "false"}
+VALID_REFERENCE_TYPE = {"historical_schema_reference", "historical_baseline", "official_dataset", "methodology_reference"}
 
 
 def read_csv(name):
@@ -69,6 +71,7 @@ def main():
         polls = require_columns("polls_metadata.csv", EXPECTED_COLUMNS["polls_metadata.csv"])
         poll_results = require_columns("poll_candidate_results.csv", EXPECTED_COLUMNS["poll_candidate_results.csv"])
         source_feeds = require_columns("source_feeds.csv", EXPECTED_COLUMNS["source_feeds.csv"])
+        reference_datasets = require_columns("reference_datasets.csv", EXPECTED_COLUMNS["reference_datasets.csv"])
 
         require_unique(sources, "source_id", "sources.csv")
         require_unique(candidates, "candidate_id", "candidates.csv")
@@ -76,6 +79,7 @@ def main():
         require_unique(polls, "poll_id", "polls_metadata.csv")
         require_unique(poll_results, "poll_result_id", "poll_candidate_results.csv")
         require_unique(source_feeds, "feed_id", "source_feeds.csv")
+        require_unique(reference_datasets, "reference_dataset_id", "reference_datasets.csv")
 
         source_ids = {row["source_id"] for row in sources}
         candidate_ids = {row["candidate_id"] for row in candidates}
@@ -108,6 +112,18 @@ def main():
                 errors.append(f"Invalid refresh_cadence for {row['feed_id']}: {row['refresh_cadence']}")
             if row["review_required"] not in VALID_BOOLEAN:
                 errors.append(f"Invalid review_required for {row['feed_id']}: {row['review_required']}")
+
+        for row in reference_datasets:
+            if row["source_id"] not in source_ids:
+                errors.append(f"Unknown source_id in reference_datasets.csv: {row['source_id']}")
+            if not URL_RE.match(row["url"]):
+                errors.append(f"Invalid reference dataset URL for {row['reference_dataset_id']}: {row['url']}")
+            if row["status"] not in VALID_SOURCE_STATUS:
+                errors.append(f"Invalid reference dataset status for {row['reference_dataset_id']}: {row['status']}")
+            if row["reference_type"] not in VALID_REFERENCE_TYPE:
+                errors.append(f"Invalid reference_type for {row['reference_dataset_id']}: {row['reference_type']}")
+            if not DATE_RE.match(row["last_verified_at"]):
+                errors.append(f"Invalid last_verified_at for {row['reference_dataset_id']}: {row['last_verified_at']}")
 
         for row in candidates:
             if row["source_id"] not in source_ids:
@@ -162,8 +178,10 @@ def main():
     print(f"Polls: {len(polls)}")
     print(f"Poll result rows: {len(poll_results)}")
     print(f"Source feeds: {len(source_feeds)}")
+    print(f"Reference datasets: {len(reference_datasets)}")
 
 
 if __name__ == "__main__":
     main()
+
 
