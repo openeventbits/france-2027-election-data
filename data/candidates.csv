@@ -1,4 +1,4 @@
 "candidate_id","full_name","display_name","party","bloc","current_status","status_as_of","official_site","wikidata_id","color_hex","color_name","display_order","notes","last_verified_at","source_id"
-"cand_attal","Gabriel Attal","Gabriel Attal","Renaissance","Centre / Macron camp","likely_candidate","2026-06-27","","","#2F80ED","blue","1","Prototype candidate row","2026-06-27","src_prototype"
-"cand_philippe","Edouard Philippe","Edouard Philippe","Horizons","Centre-right","likely_candidate","2026-06-27","","","#00A3A3","teal","2","Prototype candidate row","2026-06-27","src_prototype"
-"cand_melenchon","Jean-Luc Melenchon","Jean-Luc Melenchon","La France insoumise","Left","likely_candidate","2026-06-27","","","#C026D3","purple","4","Prototype candidate row","2026-06-27","src_prototype"
+"cand_attal","Gabriel Attal","Gabriel Attal","Renaissance","Centre / Macron camp","declared_candidate","2026-06-27","","","#2F80ED","blue","1","Prototype candidate row","2026-06-27","src_prototype"
+"cand_philippe","Edouard Philippe","Edouard Philippe","Horizons","Centre-right","declared_candidate","2026-06-27","","","#00A3A3","teal","2","Prototype candidate row","2026-06-27","src_prototype"
+"cand_melenchon","Jean-Luc Melenchon","Jean-Luc Melenchon","La France insoumise","Left","declared_candidate","2026-06-27","","","#C026D3","purple","4","Prototype candidate row","2026-06-27","src_prototype"

@@ -29,6 +29,16 @@ VALID_AUTOMATION_STAGE = {"not_automated", "planned", "staging", "active"}
 VALID_REFRESH_CADENCE = {"hourly", "daily", "weekly", "monthly", "manual"}
 VALID_BOOLEAN = {"true", "false"}
 VALID_REFERENCE_TYPE = {"historical_schema_reference", "historical_baseline", "official_dataset", "methodology_reference"}
+VALID_CANDIDATE_STATUS = {
+    "declared_candidate",
+    "party_designated",
+    "primary_candidate",
+    "expected_candidate",
+    "poll_scenario_candidate",
+    "not_announced",
+    "withdrawn",
+    "needs_review",
+}
 
 
 def read_csv(name):
@@ -130,6 +140,8 @@ def main():
                 errors.append(f"Unknown source_id in candidates.csv: {row['source_id']}")
             if not HEX_RE.match(row["color_hex"]):
                 errors.append(f"Invalid color_hex for {row['candidate_id']}: {row['color_hex']}")
+            if row["current_status"] not in VALID_CANDIDATE_STATUS:
+                errors.append(f"Invalid current_status for {row['candidate_id']}: {row['current_status']}")
 
         for row in events:
             if row["source_id"] not in source_ids:
@@ -183,5 +195,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 

@@ -3,6 +3,20 @@ const state = {
   data: null
 };
 
+function formatCandidateStatus(status) {
+  const labels = {
+    declared_candidate: "Declared candidate",
+    party_designated: "Party-designated",
+    primary_candidate: "Primary candidate",
+    expected_candidate: "Expected candidate",
+    poll_scenario_candidate: "Poll scenario",
+    not_announced: "Not announced",
+    withdrawn: "Withdrawn",
+    needs_review: "Needs review"
+  };
+
+  return labels[status] || "Status pending";
+}
 function formatChange(value) {
   if (value > 0) return `<span class="change-up">+${value}</span>`;
   if (value < 0) return `<span class="change-down">${value}</span>`;
@@ -82,6 +96,7 @@ function renderCandidates(candidates) {
         <strong>${candidate.display_name}</strong>
       </div>
       <div class="meta">${candidate.party} · ${candidate.bloc}</div>
+      <div class="meta">${formatCandidateStatus(candidate.current_status)}</div>
       <div class="meta">
         Poll data pending verified public source
       </div>
@@ -107,7 +122,7 @@ function initMap(data) {
     scrollWheelZoom: true,
     zoomSnap: 0.25,
     zoomDelta: 0.25
-  }).setView([46.75, 2.35], 5.95);
+  }).setView([46.75, 2.35], 6.35);
 
   window.addEventListener("resize", () => map.invalidateSize());
   setTimeout(() => map.invalidateSize(), 150);
@@ -148,4 +163,7 @@ boot().catch((error) => {
   console.error(error);
   document.body.insertAdjacentHTML("beforeend", `<pre style="padding:16px;color:#fb7185">${error.message}</pre>`);
 });
+
+
+
 

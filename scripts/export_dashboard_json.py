@@ -46,6 +46,7 @@ def main():
             "display_name": candidate["display_name"],
             "party": candidate["party"],
             "bloc": candidate["bloc"],
+            "current_status": candidate["current_status"],
             "color_hex": candidate["color_hex"],
             "latest_poll": to_number(poll_row.get("poll_value")),
             "poll_change": to_number(poll_row.get("change_vs_previous_comparable")),
@@ -98,3 +99,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

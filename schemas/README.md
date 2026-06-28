@@ -201,5 +201,20 @@ Controlled values for `relevance`:
 * `unclear`
 
 Auto-triage can reduce review burden, but canonical promotion should remain explicit.
+## Candidate Status Values
 
+`candidates.csv` uses controlled candidate status values so the project can distinguish declared candidates from poll-scenario figures or expected candidates.
+
+Controlled values:
+
+* `declared_candidate`
+* `party_designated`
+* `primary_candidate`
+* `expected_candidate`
+* `poll_scenario_candidate`
+* `not_announced`
+* `withdrawn`
+* `needs_review`
+
+The dashboard candidate cards should prioritize declared, party-designated, and primary candidates. Poll-scenario figures should be handled separately from confirmed candidate cards.
 
