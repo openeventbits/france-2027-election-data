@@ -12,6 +12,7 @@ EXPECTED_COLUMNS = {
     "campaign_events.csv": ["event_id", "event_date", "event_type", "title", "candidate_id", "latitude", "longitude", "source_id"],
     "polls_metadata.csv": ["poll_id", "institute", "publication_date", "source_id"],
     "poll_candidate_results.csv": ["poll_result_id", "poll_id", "candidate_id", "poll_value", "source_id"],
+    "source_feeds.csv": ["feed_id", "source_id", "feed_name", "feed_type", "url", "collection_method", "automation_stage", "status", "refresh_cadence", "review_required"],
 }
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -21,6 +22,11 @@ URL_RE = re.compile(r"^https?://")
 VALID_SOURCE_STATUS = {"active", "inactive", "needs_review"}
 VALID_COLLECTION_METHOD = {"manual", "manual_review", "automated", "staging"}
 VALID_SOURCE_LEVEL = {"primary", "secondary"}
+
+VALID_FEED_TYPE = {"source_page", "legal_page", "catalog", "api"}
+VALID_AUTOMATION_STAGE = {"not_automated", "planned", "staging", "active"}
+VALID_REFRESH_CADENCE = {"hourly", "daily", "weekly", "monthly", "manual"}
+VALID_BOOLEAN = {"true", "false"}
 
 
 def read_csv(name):
@@ -62,12 +68,14 @@ def main():
         events = require_columns("campaign_events.csv", EXPECTED_COLUMNS["campaign_events.csv"])
         polls = require_columns("polls_metadata.csv", EXPECTED_COLUMNS["polls_metadata.csv"])
         poll_results = require_columns("poll_candidate_results.csv", EXPECTED_COLUMNS["poll_candidate_results.csv"])
+        source_feeds = require_columns("source_feeds.csv", EXPECTED_COLUMNS["source_feeds.csv"])
 
         require_unique(sources, "source_id", "sources.csv")
         require_unique(candidates, "candidate_id", "candidates.csv")
         require_unique(events, "event_id", "campaign_events.csv")
         require_unique(polls, "poll_id", "polls_metadata.csv")
         require_unique(poll_results, "poll_result_id", "poll_candidate_results.csv")
+        require_unique(source_feeds, "feed_id", "source_feeds.csv")
 
         source_ids = {row["source_id"] for row in sources}
         candidate_ids = {row["candidate_id"] for row in candidates}
@@ -82,6 +90,24 @@ def main():
                 errors.append(f"Invalid collection_method for {row['source_id']}: {row['collection_method']}")
             if row["primary_or_secondary"] not in VALID_SOURCE_LEVEL:
                 errors.append(f"Invalid primary_or_secondary for {row['source_id']}: {row['primary_or_secondary']}")
+
+        for row in source_feeds:
+            if row["source_id"] not in source_ids:
+                errors.append(f"Unknown source_id in source_feeds.csv: {row['source_id']}")
+            if not URL_RE.match(row["url"]):
+                errors.append(f"Invalid feed URL for {row['feed_id']}: {row['url']}")
+            if row["feed_type"] not in VALID_FEED_TYPE:
+                errors.append(f"Invalid feed_type for {row['feed_id']}: {row['feed_type']}")
+            if row["collection_method"] not in VALID_COLLECTION_METHOD:
+                errors.append(f"Invalid collection_method for {row['feed_id']}: {row['collection_method']}")
+            if row["automation_stage"] not in VALID_AUTOMATION_STAGE:
+                errors.append(f"Invalid automation_stage for {row['feed_id']}: {row['automation_stage']}")
+            if row["status"] not in VALID_SOURCE_STATUS:
+                errors.append(f"Invalid feed status for {row['feed_id']}: {row['status']}")
+            if row["refresh_cadence"] not in VALID_REFRESH_CADENCE:
+                errors.append(f"Invalid refresh_cadence for {row['feed_id']}: {row['refresh_cadence']}")
+            if row["review_required"] not in VALID_BOOLEAN:
+                errors.append(f"Invalid review_required for {row['feed_id']}: {row['review_required']}")
 
         for row in candidates:
             if row["source_id"] not in source_ids:
@@ -135,6 +161,7 @@ def main():
     print(f"Events: {len(events)}")
     print(f"Polls: {len(polls)}")
     print(f"Poll result rows: {len(poll_results)}")
+    print(f"Source feeds: {len(source_feeds)}")
 
 
 if __name__ == "__main__":
