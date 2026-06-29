@@ -288,6 +288,10 @@ Corrections are welcome.
 
 Every dataset row should be correctable through GitHub issues or pull requests. Corrections should preserve the audit trail where possible and be recorded in `data/changelog.csv`.
 
+## Roadmap
+
+- [Roadmap](ROADMAP.md)
+
 ## Contributing
 
 Useful contributions include:
