@@ -25,9 +25,9 @@ In short: France 2027 Monitor is the monitor; FR27 Open Data is the data layer b
 
 ## Repository Status
 
-France 2027 Monitor is in demo-preview stage.
+France 2027 Monitor is an early public dashboard preview.
 
-FR27 Open Data, the source-linked data layer behind the monitor, is in prototype stage.
+FR27 Open Data, the source-linked data layer behind the monitor, is an early source-linked dataset with reviewed seed rows and staging queues.
 
 Current working components:
 
@@ -43,7 +43,7 @@ Current working components:
 - GitHub Actions data-check workflow
 - correction and contribution workflow
 
-Prototype rows are clearly marked as prototype data. Real public-source rows should pass through staging, validation, and review before becoming canonical data.
+The dashboard currently includes source-linked campaign-event seed rows and source-linked official-document rows. Seed rows demonstrate the public data model; they are not comprehensive campaign coverage. New public-source rows should pass through staging, validation, and review before becoming canonical data.
 
 ## Current Data Pipeline
 
@@ -249,25 +249,23 @@ The map does not show:
 
 ## Current Status
 
-This repository is in early prototype stage.
+This repository is in early public-preview stage.
 
-Current focus:
+Already present:
 
-* methodology
-* dataset schemas
-* CSV data spine
-* staging workflow
-* dashboard blueprint
-* validation design
+* source registry and schema documentation
+* candidate registry
+* source-linked campaign-event seed rows
+* source-linked official-document rows
+* staging queues for public metadata, Commission des sondages notices, poll-media discovery, and source resolution
+* dashboard JSON export and GitHub Pages preview
+* validation script and GitHub Actions data-check workflow
+* correction, source-suggestion, and campaign-event issue templates
+* roadmap and contribution guidance
 
-Next planned work:
+Next milestones are tracked in `ROADMAP.md`.
 
-* sample seed data
-* JSON export script
-* static dashboard prototype in `/docs`
-* GitHub Pages preview
-* validation workflow
-* source/correction issue templates
+The immediate priority is to expand verified source-linked rows conservatively while keeping canonical poll metadata empty until manual verification and keeping candidate-level poll result rows blocked.
 
 ## Repository Structure
 
