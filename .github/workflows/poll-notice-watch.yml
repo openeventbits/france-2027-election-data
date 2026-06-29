@@ -1,0 +1,88 @@
+name: Poll notice watcher
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 05:20 UTC.
+    # This stages Commission des sondages poll-notice candidates only.
+    - cron: "20 5 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  poll-notice-watch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run poll notice watcher
+        run: python scripts/fetch_poll_notices.py
+
+      - name: Run poll notice triage
+        run: python scripts/triage_poll_notices.py
+
+      - name: Export dashboard JSON
+        run: python scripts/export_dashboard_json.py
+
+      - name: Validate canonical data
+        run: python scripts/validate_data.py
+
+      - name: Safety check poll values remain unpublished
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv
+          import json
+          from pathlib import Path
+
+          root = Path(".")
+          metadata_rows = list(csv.DictReader((root / "data" / "polls_metadata.csv").open(encoding="utf-8-sig")))
+          result_rows = list(csv.DictReader((root / "data" / "poll_candidate_results.csv").open(encoding="utf-8-sig")))
+
+          dashboard = json.loads((root / "docs" / "data" / "dashboard_sample.json").read_text(encoding="utf-8"))
+          status = dashboard.get("poll_notice_status", {})
+
+          if metadata_rows:
+              raise SystemExit("Safety stop: canonical polls_metadata.csv is not empty.")
+          if result_rows:
+              raise SystemExit("Safety stop: canonical poll_candidate_results.csv is not empty.")
+          if status.get("candidate_level_values_extracted") is not False:
+              raise SystemExit("Safety stop: dashboard indicates candidate-level values were extracted.")
+
+          print("Safety check passed: no canonical poll values published.")
+          PY
+
+      - name: Show changed files
+        run: git status --short
+
+      - name: Commit staged poll notice updates if changed
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No poll notice changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            staging/poll_notices_review.csv \
+            staging/poll_notices_triaged_review.csv \
+            docs/data/dashboard_sample.json
+
+          if git diff --cached --quiet; then
+            echo "No staged poll notice/dashboard changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update staged poll notice review queue"
+          git push
