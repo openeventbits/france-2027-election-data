@@ -1,5 +1,7 @@
+.gitattributes text eol=lf
 # FR27 generated/staged review files
 staging/poll_notices_review.csv text eol=lf
 staging/poll_notices_triaged_review.csv text eol=lf
 .github/workflows/*.yml text eol=lf
 scripts/*.py text eol=lf
+staging/poll_metadata_high_priority_review.csv text eol=lf

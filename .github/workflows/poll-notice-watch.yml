@@ -29,6 +29,9 @@ jobs:
       - name: Run poll notice triage
         run: python scripts/triage_poll_notices.py
 
+      - name: Prepare poll metadata review queue
+        run: python scripts/prepare_poll_metadata_review.py
+
       - name: Export dashboard JSON
         run: python scripts/export_dashboard_json.py
 
@@ -77,6 +80,7 @@ jobs:
           git add \
             staging/poll_notices_review.csv \
             staging/poll_notices_triaged_review.csv \
+            staging/poll_metadata_high_priority_review.csv \
             docs/data/dashboard_sample.json
 
           if git diff --cached --quiet; then
