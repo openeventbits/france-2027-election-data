@@ -20,6 +20,9 @@ jobs:
       - name: Validate data
         run: python scripts/validate_data.py
 
+      - name: Validate poll media discovery staging
+        run: python scripts/validate_poll_media_mentions.py
+
       - name: Prepare poll metadata review queue
         run: python scripts/prepare_poll_metadata_review.py
 

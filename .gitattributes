@@ -15,3 +15,4 @@ docs/protocols/*.md text eol=lf
 scripts/fetch_poll_media_mentions.py text eol=lf
 staging/poll_media_query_feeds.csv text eol=lf
 staging/poll_media_mentions.csv text eol=lf
+scripts/validate_poll_media_mentions.py text eol=lf
