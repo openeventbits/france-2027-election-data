@@ -1,10 +1,10 @@
-# FR27 Open Data
+# France 2027 Monitor
 
-**Open, versioned, source-linked data for the French 2027 presidential election.**
+**A live civic-intelligence dashboard for tracking the French presidential election through source-linked public data.**
 
-FR27 Open Data is a GitHub-native public dataset and live-map prototype for tracking France 2027 election and campaign data.
+France 2027 Monitor is the public dashboard and product layer built on **FR27 Open Data**: a GitHub-native dataset for official sources, candidate activity, legal/procedural developments, polling metadata, source-feed references, correction workflows, JSON exports, and dashboard-ready CSV files.
 
-It is designed as the transparent data layer underneath election dashboards: reusable CSV files, documented schemas, source links, correction workflow, JSON exports, and a public dashboard.
+The project is designed for transparent election monitoring, not prediction. Every visible claim should resolve to inspectable data, source links, and review history.
 
 > Every marker should be a source-linked row. Every visible claim should be inspectable. Every correction should leave a trace.
 
