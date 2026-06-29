@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260629-3";
+const CACHE_VERSION = "20260629-4";
 
 const state = {
   candidates: new Map(),
@@ -164,6 +164,18 @@ function renderPollCard(poll, pollStatus) {
       </p>
     ` : "";
 
+  const mediaDiscovery = pollStatus.media_discovery_status || {};
+  const mediaRows = mediaDiscovery.total_media_mentions ?? 0;
+  const mediaFeeds = mediaDiscovery.query_feed_count ?? 0;
+  const mediaHigh = mediaDiscovery.high_priority_count ?? 0;
+  const mediaPending = mediaDiscovery.pending_review_count ?? 0;
+  const mediaValuesExtracted = mediaDiscovery.candidate_level_values_extracted ? "Yes" : "No";
+  const mediaDiscoveryLine = mediaRows ? `
+      <p class="meta">
+        Media discovery: ${mediaRows} staged article mentions from ${mediaFeeds} query feeds. ${mediaHigh} high priority. ${mediaPending} pending review. Candidate-level values extracted: ${mediaValuesExtracted}.
+      </p>
+    ` : "";
+
   const examples = (pollStatus.high_priority_examples || []).slice(0, 2).map((row) => `
     <li style="margin-top:6px">
       <a href="${escapeHtml(row.notice_url)}" target="_blank" rel="noreferrer">${escapeHtml(row.link_text)}</a>
@@ -183,6 +195,7 @@ function renderPollCard(poll, pollStatus) {
         Candidate-level values extracted: ${valuesExtracted}.
       </p>
       ${metadataReviewLine}
+      ${mediaDiscoveryLine}
       ${examples ? `
         <p class="meta" style="margin-top:10px"><strong>Review queue examples</strong></p>
         <ul class="meta" style="margin:6px 0 0 18px; padding:0">${examples}</ul>

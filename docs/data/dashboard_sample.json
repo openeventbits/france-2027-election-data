@@ -185,6 +185,54 @@
         }
       ],
       "note": "Metadata-only manual review queue. Candidate-level poll values are not stored here."
+    },
+    "media_discovery_status": {
+      "source_file": "staging/poll_media_mentions.csv",
+      "query_feed_file": "staging/poll_media_query_feeds.csv",
+      "query_feed_count": 3,
+      "total_media_mentions": 30,
+      "high_priority_count": 7,
+      "medium_priority_count": 23,
+      "low_priority_count": 0,
+      "pending_review_count": 30,
+      "promote_to_metadata_review_count": 0,
+      "candidate_level_values_extracted": false,
+      "latest_detected_at": "2026-06-29T09:48:11Z",
+      "priority_counts": {
+        "high": 7,
+        "medium": 23
+      },
+      "label_counts": {
+        "likely_poll_media_mention": 7,
+        "possible_poll_media_mention": 23
+      },
+      "review_decision_counts": {
+        "pending": 30
+      },
+      "high_priority_examples": [
+        {
+          "source_name": "Ipsos",
+          "article_title": "Présidentielle 2027 : le retour du vote sur enjeux ? - Ipsos",
+          "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPTXZiSFBtbHRZMkVReU53cXBJNjJqZEROR3dseFQwR05QeE42ODNBZTktWUF2QmVLdXQxSG1GMml1bG5hQzdzaUVHM0VsM0dpdWdVMF9oUzdUZVJqRzhOSEQwSDZiYldaN1VtbW9iZU81LUZ2VWFRRnJIUDFWRUlZMWNB?oc=5",
+          "published_at": "2026-04-13T07:00:00Z",
+          "possible_institute": "Ipsos"
+        },
+        {
+          "source_name": "franceinfo",
+          "article_title": "Présidentielle 2027 : s'en remettre aux sondages révèle \"une forme d'impuissance du politique à dégager des personnalités qui font consensus\", note Christelle Craplet, directrice opinion Ipsos-BVA - franceinfo",
+          "article_url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNRzdIaXEyQThKaGo4dXViMVVySkp3OGRBejlFc2t6ck5kd3R1M1Q2MExDS0ZuRlNoNlJNbnE3Yl9qZHFhWmlyWXZUWGdocFRONVo5eFRud1o5OVpWVjVRUXZ0VUR1cVlVTElKTjVEOUdvb3UybGZ1ZHdkeE9TNU1NWDkwWVhYUmdFZzU4ZmNTbnhpLUh",
+          "published_at": "2026-04-29T07:00:00Z",
+          "possible_institute": "Ipsos; BVA"
+        },
+        {
+          "source_name": "tolunacorporate.com",
+          "article_title": "Intentions de vote à l’élection présidentielle 2027 - tolunacorporate.com",
+          "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQkVIQ05ZZ1R1bGFhVlRtc3hWMzFfS2ZMTzFxNVBxTUt1YmVKLWFDcU9rOEJOalJ6SlZZUzB0dDNKTjQ1M3czMXFWWDNKc2hFWlBaTUFhU29GZlBmTjhBY1VoaTVUOUViMnpYb1MyVHB6MXRGdEM4Z1FPUjMtWkhuOUtFazVTZw?oc=5",
+          "published_at": "2026-05-04T07:00:00Z",
+          "possible_institute": "Toluna"
+        }
+      ],
+      "note": "Staged media-discovery metadata only. No article scraping and no candidate-level poll values."
     }
   }
 }

@@ -32,5 +32,8 @@ jobs:
       - name: Enrich dashboard metadata review status
         run: python scripts/enrich_dashboard_poll_metadata_review_status.py
 
+      - name: Enrich dashboard poll media discovery status
+        run: python scripts/enrich_dashboard_poll_media_discovery_status.py
+
       - name: Ensure generated review/dashboard data is committed
         run: git diff --exit-code staging/poll_metadata_high_priority_review.csv docs/data/dashboard_sample.json
