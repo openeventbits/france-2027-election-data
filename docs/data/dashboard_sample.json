@@ -1,6 +1,7 @@
 {
-  "updated_at": "2026-06-27T12:00:00Z",
-  "project": "FR27 Open Data",
+  "updated_at": "2026-06-29T04:30:21Z",
+  "project": "France 2027 Monitor",
+  "data_layer": "FR27 Open Data",
   "status": "prototype",
   "candidates": [
     {
@@ -96,5 +97,63 @@
     "sample_size": null,
     "notice_url": null,
     "note": null
+  },
+  "poll_notice_status": {
+    "status_label": "review_queue_active",
+    "source_name": "Commission des sondages",
+    "source_file": "staging/poll_notices_triaged_review.csv",
+    "total_staged_notices": 86,
+    "high_priority_review_count": 7,
+    "canonical_poll_metadata_rows": 0,
+    "canonical_poll_result_rows": 0,
+    "candidate_level_values_extracted": false,
+    "latest_detected_at": "2026-06-29T04:30:21Z",
+    "triage_counts": {
+      "candidate_or_field_context_notice": 10,
+      "historical_reference": 2,
+      "likely_presidential_voting_intention_notice": 7,
+      "needs_manual_review": 29,
+      "official_communique": 1,
+      "political_barometer_context_notice": 36,
+      "source_index_reference": 1
+    },
+    "review_priority_counts": {
+      "high": 7,
+      "low": 39,
+      "medium": 40
+    },
+    "high_priority_examples": [
+      {
+        "poll_notice_stage_id": "poll_notice_stage_a15b32a660cd1a05",
+        "link_text": "9961 Pres Toluna Harris Interactive Lopinion Suivi du potentiel électoral V2 27 juin",
+        "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/1942",
+        "triage_label": "likely_presidential_voting_intention_notice"
+      },
+      {
+        "poll_notice_stage_id": "poll_notice_stage_de917f3c5571775a",
+        "link_text": "9975 Pres Toluna HI Suivi du potentiel électoral V3 Lopinion 3 septembre",
+        "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/1957",
+        "triage_label": "likely_presidential_voting_intention_notice"
+      },
+      {
+        "poll_notice_stage_id": "poll_notice_stage_3dfdf61fddcb4b47",
+        "link_text": "10049 Pres potentiel vote RN CLUSTER 17 Marianne 14 janvier",
+        "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/2035",
+        "triage_label": "likely_presidential_voting_intention_notice"
+      },
+      {
+        "poll_notice_stage_id": "poll_notice_stage_c846a56414dcac91",
+        "link_text": "10168 Pres Enquete electorale IPSOS BVA Le Monde 13 avril",
+        "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/2169",
+        "triage_label": "likely_presidential_voting_intention_notice"
+      },
+      {
+        "poll_notice_stage_id": "poll_notice_stage_32a4a8ed46edec82",
+        "link_text": "10205 Pres IV OPINIONWAY JDD 13 juin",
+        "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/2210",
+        "triage_label": "likely_presidential_voting_intention_notice"
+      }
+    ],
+    "note": "Staged poll-notice discovery only. Candidate-level poll values are not extracted or displayed."
   }
 }

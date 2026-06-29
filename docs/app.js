@@ -1,7 +1,19 @@
+const CACHE_VERSION = "20260629-1";
+
 const state = {
   candidates: new Map(),
   data: null
 };
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#039;"
+  }[char]));
+}
 
 function formatCandidateStatus(status) {
   const labels = {
@@ -17,6 +29,7 @@ function formatCandidateStatus(status) {
 
   return labels[status] || "Status pending";
 }
+
 function formatChange(value) {
   if (value > 0) return `<span class="change-up">+${value}</span>`;
   if (value < 0) return `<span class="change-down">${value}</span>`;
@@ -56,16 +69,16 @@ function popupHtml(event) {
 
   return `
     <div class="popup-card">
-      <strong>${event.title}</strong>
-      <div class="meta">${event.event_type} · ${event.event_date}</div>
-      <div class="meta">${event.location_name}, ${event.region}</div>
+      <strong>${escapeHtml(event.title)}</strong>
+      <div class="meta">${escapeHtml(event.event_type)} · ${escapeHtml(event.event_date)}</div>
+      <div class="meta">${escapeHtml(event.location_name)}, ${escapeHtml(event.region)}</div>
       <hr>
-      <div><strong>${event.candidate_name}</strong></div>
-      <div class="meta">${candidate.party || ""} · ${candidate.bloc || ""}</div>
+      <div><strong>${escapeHtml(event.candidate_name)}</strong></div>
+      <div class="meta">${escapeHtml(candidate.party || "")} · ${escapeHtml(candidate.bloc || "")}</div>
       <div class="meta">${poll}</div>
       <hr>
-      <div class="meta">Source: <a href="${event.source_url}" target="_blank" rel="noreferrer">${event.source_name}</a></div>
-      <div class="meta">Verification: ${event.verification_status}</div>
+      <div class="meta">Source: <a href="${escapeHtml(event.source_url)}" target="_blank" rel="noreferrer">${escapeHtml(event.source_name)}</a></div>
+      <div class="meta">Verification: ${escapeHtml(event.verification_status)}</div>
     </div>
   `;
 }
@@ -76,11 +89,11 @@ function renderWire(events) {
     const candidate = candidateById(event.candidate_id);
     return `
       <article class="event-item">
-        <strong>${event.title}</strong>
-        <div class="meta">${event.event_date} · ${event.location_name}</div>
+        <strong>${escapeHtml(event.title)}</strong>
+        <div class="meta">${escapeHtml(event.event_date)} · ${escapeHtml(event.location_name)}</div>
         <div class="meta">
           <span class="color-chip" style="display:inline-block;background:${candidate.color_hex || "#38bdf8"}"></span>
-          ${event.candidate_name} · ${event.event_type}
+          ${escapeHtml(event.candidate_name)} · ${escapeHtml(event.event_type)}
         </div>
       </article>
     `;
@@ -93,10 +106,10 @@ function renderCandidates(candidates) {
     <article class="candidate-item">
       <div class="candidate-row">
         <span class="color-chip" style="background:${candidate.color_hex}"></span>
-        <strong>${candidate.display_name}</strong>
+        <strong>${escapeHtml(candidate.display_name)}</strong>
       </div>
-      <div class="meta">${candidate.party} · ${candidate.bloc}</div>
-      <div class="meta">${formatCandidateStatus(candidate.current_status)}</div>
+      <div class="meta">${escapeHtml(candidate.party)} · ${escapeHtml(candidate.bloc)}</div>
+      <div class="meta">${escapeHtml(formatCandidateStatus(candidate.current_status))}</div>
       <div class="meta">
         Poll data pending verified public source
       </div>
@@ -104,13 +117,51 @@ function renderCandidates(candidates) {
   `).join("");
 }
 
-function renderPollCard(poll) {
+function renderPollCard(poll, pollStatus) {
   const card = document.getElementById("pollCard");
+
+  if (!pollStatus || pollStatus.status_label === "no_staged_notices") {
+    card.innerHTML = `
+      <div class="pending-card">
+        <strong>Poll notices pending verified public source</strong>
+        <p class="meta" style="margin-top:8px">
+          This panel will show public poll notices after source and reuse conditions are reviewed. Placeholder poll values are not displayed in the public prototype.
+        </p>
+      </div>
+    `;
+    return;
+  }
+
+  const total = pollStatus.total_staged_notices ?? 0;
+  const highPriority = pollStatus.high_priority_review_count ?? 0;
+  const canonicalMetadata = pollStatus.canonical_poll_metadata_rows ?? 0;
+  const canonicalResults = pollStatus.canonical_poll_result_rows ?? 0;
+  const valuesExtracted = pollStatus.candidate_level_values_extracted ? "Yes" : "No";
+
+  const examples = (pollStatus.high_priority_examples || []).slice(0, 3).map((row) => `
+    <li style="margin-top:6px">
+      <a href="${escapeHtml(row.notice_url)}" target="_blank" rel="noreferrer">${escapeHtml(row.link_text)}</a>
+    </li>
+  `).join("");
+
   card.innerHTML = `
     <div class="pending-card">
-      <strong>Poll notices pending verified public source</strong>
+      <strong>Poll notice watcher active</strong>
       <p class="meta" style="margin-top:8px">
-        This panel will show public poll notices after source and reuse conditions are reviewed. Placeholder poll values are not displayed in the public prototype.
+        ${total} Commission des sondages notice candidates are staged for review. ${highPriority} are high-priority likely presidential voting-intention notices.
+      </p>
+      <p class="meta">
+        Canonical poll metadata rows: ${canonicalMetadata}. Candidate poll result rows: ${canonicalResults}.
+      </p>
+      <p class="meta">
+        Candidate-level values extracted: ${valuesExtracted}.
+      </p>
+      ${examples ? `
+        <p class="meta" style="margin-top:10px"><strong>Review queue examples</strong></p>
+        <ul class="meta" style="margin:6px 0 0 18px; padding:0">${examples}</ul>
+      ` : ""}
+      <p class="meta" style="margin-top:10px">
+        Poll percentages remain hidden until source, method, and reuse conditions are reviewed.
       </p>
     </div>
   `;
@@ -144,7 +195,7 @@ function initMap(data) {
 }
 
 async function boot() {
-  const response = await fetch("./data/dashboard_sample.json");
+  const response = await fetch(`./data/dashboard_sample.json?v=${CACHE_VERSION}`);
   const data = await response.json();
   state.data = data;
   data.candidates.forEach((candidate) => {
@@ -156,14 +207,10 @@ async function boot() {
   initMap(data);
   renderWire(data.events);
   renderCandidates(data.candidates);
-  renderPollCard(data.latest_poll);
+  renderPollCard(data.latest_poll, data.poll_notice_status);
 }
 
 boot().catch((error) => {
   console.error(error);
-  document.body.insertAdjacentHTML("beforeend", `<pre style="padding:16px;color:#fb7185">${error.message}</pre>`);
+  document.body.insertAdjacentHTML("beforeend", `<pre style="padding:16px;color:#fb7185">${escapeHtml(error.message)}</pre>`);
 });
-
-
-
-

@@ -1,14 +1,23 @@
 import csv
 import json
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+STAGING = ROOT / "staging"
 OUT = ROOT / "docs" / "data" / "dashboard_sample.json"
 
 
 def read_csv(name):
     path = DATA / name
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def read_optional_csv(path):
+    if not path.exists():
+        return []
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
 
@@ -22,6 +31,61 @@ def to_number(value):
         return int(value)
     except ValueError:
         return value
+
+
+def summarize_poll_notices(polls, poll_results):
+    triaged_path = STAGING / "poll_notices_triaged_review.csv"
+    raw_path = STAGING / "poll_notices_review.csv"
+
+    rows = read_optional_csv(triaged_path)
+    source_file = "staging/poll_notices_triaged_review.csv"
+
+    if not rows:
+        rows = read_optional_csv(raw_path)
+        source_file = "staging/poll_notices_review.csv"
+
+    triage_counts = Counter(row.get("triage_label") or "untriaged" for row in rows)
+    priority_counts = Counter(row.get("review_priority") or "untriaged" for row in rows)
+
+    detected_values = [
+        row.get("detected_at")
+        for row in rows
+        if row.get("detected_at")
+    ]
+
+    high_priority_rows = [
+        row for row in rows
+        if row.get("review_priority") == "high"
+    ]
+
+    candidate_values_extracted = any(
+        (row.get("candidate_level_values_extracted") or "").lower() == "true"
+        for row in rows
+    )
+
+    return {
+        "status_label": "review_queue_active" if rows else "no_staged_notices",
+        "source_name": "Commission des sondages",
+        "source_file": source_file,
+        "total_staged_notices": len(rows),
+        "high_priority_review_count": len(high_priority_rows),
+        "canonical_poll_metadata_rows": len(polls),
+        "canonical_poll_result_rows": len(poll_results),
+        "candidate_level_values_extracted": candidate_values_extracted,
+        "latest_detected_at": max(detected_values) if detected_values else None,
+        "triage_counts": dict(sorted(triage_counts.items())),
+        "review_priority_counts": dict(sorted(priority_counts.items())),
+        "high_priority_examples": [
+            {
+                "poll_notice_stage_id": row.get("poll_notice_stage_id"),
+                "link_text": row.get("link_text"),
+                "notice_url": row.get("notice_url"),
+                "triage_label": row.get("triage_label"),
+            }
+            for row in high_priority_rows[:5]
+        ],
+        "note": "Staged poll-notice discovery only. Candidate-level poll values are not extracted or displayed."
+    }
 
 
 def main():
@@ -72,9 +136,12 @@ def main():
             "verification_status": event["verification_status"]
         })
 
+    poll_notice_status = summarize_poll_notices(polls, poll_results)
+
     payload = {
-        "updated_at": "2026-06-27T12:00:00Z",
-        "project": "FR27 Open Data",
+        "updated_at": poll_notice_status.get("latest_detected_at") or "2026-06-27T12:00:00Z",
+        "project": "France 2027 Monitor",
+        "data_layer": "FR27 Open Data",
         "status": "prototype",
         "candidates": dashboard_candidates,
         "events": dashboard_events,
@@ -87,16 +154,22 @@ def main():
             "sample_size": latest_poll.get("sample_size"),
             "notice_url": latest_poll.get("commission_notice_url"),
             "note": latest_poll.get("notes")
-        }
+        },
+        "poll_notice_status": poll_notice_status
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
     print(f"Wrote {OUT.relative_to(ROOT)}")
     print(f"Candidates: {len(dashboard_candidates)}")
     print(f"Events: {len(dashboard_events)}")
+    print(f"Canonical poll metadata rows: {len(polls)}")
+    print(f"Canonical poll result rows: {len(poll_results)}")
+    print(f"Staged poll notices: {poll_notice_status['total_staged_notices']}")
+    print(f"High-priority poll notice review rows: {poll_notice_status['high_priority_review_count']}")
+    print(f"Candidate-level values extracted: {poll_notice_status['candidate_level_values_extracted']}")
 
 
 if __name__ == "__main__":
     main()
-
