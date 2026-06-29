@@ -53,6 +53,17 @@ The auto-triage layer labels fetched rows conservatively:
 
 This keeps automation useful without allowing scripts to publish directly into canonical public data.
 
+The repository also includes a first poll-notice watcher for Commission des sondages:
+
+    data/source_feeds.csv
+      -> scripts/fetch_poll_notices.py
+      -> staging/poll_notices_review.csv
+      -> scripts/triage_poll_notices.py
+      -> staging/poll_notices_triaged_review.csv
+      -> later: manual review and possible promotion into data/polls_metadata.csv
+
+This watcher detects and triages presidential-election poll notice candidates. It does not extract candidate-level poll values, does not publish poll percentages, and does not write directly into canonical `/data` files.
+
 ## What This Is
 
 FR27 Open Data is an open civic-data project for the French 2027 presidential election.
