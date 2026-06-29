@@ -22,7 +22,7 @@ COMMISSION_2027_TAG_URL = (
 )
 
 USER_AGENT = (
-    "FR27-Open-Data-poll-notice-watcher/0.3 "
+    "FR27-Open-Data-poll-notice-watcher/0.4 "
     "(+https://github.com/openeventbits/france-2027-election-data)"
 )
 
@@ -210,6 +210,43 @@ def stable_id(url):
     return f"poll_notice_stage_{digest}"
 
 
+def load_existing_review_rows(path):
+    if not path.exists():
+        return {}
+
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        rows = list(csv.DictReader(f))
+
+    return {
+        row.get("notice_url"): row
+        for row in rows
+        if row.get("notice_url")
+    }
+
+
+def preserve_existing_review_state(rows, existing_by_url):
+    preserved_count = 0
+    new_count = 0
+
+    for row in rows:
+        existing = existing_by_url.get(row.get("notice_url"))
+
+        if existing:
+            preserved_count += 1
+
+            # Preserve the original first-seen timestamp and human review fields.
+            for field in ["detected_at", "review_decision", "review_notes"]:
+                if existing.get(field):
+                    row[field] = existing[field]
+        else:
+            new_count += 1
+
+        # Hard safety invariant: this watcher never extracts candidate-level values.
+        row["candidate_level_values_extracted"] = "false"
+
+    return preserved_count, new_count
+
+
 def extract_rows_from_page(page_url, feed, source_name, detected_at):
     rows = []
     warnings = []
@@ -294,6 +331,9 @@ def main():
 
     rows = sorted(deduped.values(), key=lambda row: (row["source_page_url"], row["notice_url"]))
 
+    existing_by_url = load_existing_review_rows(OUT)
+    preserved_count, new_count = preserve_existing_review_state(rows, existing_by_url)
+
     with OUT.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=OUT_FIELDS)
         writer.writeheader()
@@ -308,6 +348,8 @@ def main():
 
     print()
     print(f"Staged poll notice candidates after tightening: {len(rows)}")
+    print(f"Existing rows preserved: {preserved_count}")
+    print(f"New rows detected: {new_count}")
 
     if all_warnings:
         print()
