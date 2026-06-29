@@ -303,4 +303,6 @@ The goal is not to predict the French 2027 election.
 
 The goal is to make the public evidence layer easier to inspect, reuse, correct, fork, and cite.
 
+## Review protocols
 
+- [Poll metadata review protocol](docs/protocols/poll-metadata-review.md): metadata-only review rules for high-priority Commission des sondages notices.

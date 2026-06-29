@@ -10,3 +10,5 @@ docs/*.js text eol=lf
 docs/*.html text eol=lf
 docs/*.css text eol=lf
 docs/data/*.json text eol=lf
+*.md text eol=lf
+docs/protocols/*.md text eol=lf
