@@ -181,7 +181,7 @@ def main():
         triaged_rows.append(out_row)
 
     with OUT.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=out_fields)
+        writer = csv.DictWriter(f, fieldnames=out_fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(triaged_rows)
 

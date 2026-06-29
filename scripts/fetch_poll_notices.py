@@ -335,7 +335,7 @@ def main():
     preserved_count, new_count = preserve_existing_review_state(rows, existing_by_url)
 
     with OUT.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=OUT_FIELDS)
+        writer = csv.DictWriter(f, fieldnames=OUT_FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
