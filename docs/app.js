@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260629-1";
+const CACHE_VERSION = "20260629-2";
 
 const state = {
   candidates: new Map(),
@@ -100,6 +100,24 @@ function renderWire(events) {
   }).join("");
 }
 
+function renderCandidatePollLine(candidate) {
+  const hasLatestPoll = candidate.latest_poll !== null && candidate.latest_poll !== undefined;
+  const hasComparableChange = candidate.poll_change !== null && candidate.poll_change !== undefined;
+
+  if (!hasLatestPoll) {
+    return "Poll change pending verified comparable poll";
+  }
+
+  const unit = candidate.poll_unit || "%";
+  const latest = `${candidate.latest_poll}${unit}`;
+
+  if (!hasComparableChange) {
+    return `Latest verified poll: ${escapeHtml(latest)} · change pending comparable poll`;
+  }
+
+  return `Latest verified poll: ${escapeHtml(latest)} · change vs previous comparable: ${formatChange(candidate.poll_change)}`;
+}
+
 function renderCandidates(candidates) {
   const list = document.getElementById("candidateList");
   list.innerHTML = candidates.map((candidate) => `
@@ -110,9 +128,7 @@ function renderCandidates(candidates) {
       </div>
       <div class="meta">${escapeHtml(candidate.party)} · ${escapeHtml(candidate.bloc)}</div>
       <div class="meta">${escapeHtml(formatCandidateStatus(candidate.current_status))}</div>
-      <div class="meta">
-        Poll data pending verified public source
-      </div>
+      <div class="meta">${renderCandidatePollLine(candidate)}</div>
     </article>
   `).join("");
 }
@@ -122,7 +138,7 @@ function renderPollCard(poll, pollStatus) {
 
   if (!pollStatus || pollStatus.status_label === "no_staged_notices") {
     card.innerHTML = `
-      <div class="pending-card">
+      <div class="pending-card poll-notice-card">
         <strong>Poll notices pending verified public source</strong>
         <p class="meta" style="margin-top:8px">
           This panel will show public poll notices after source and reuse conditions are reviewed. Placeholder poll values are not displayed in the public prototype.
@@ -138,14 +154,14 @@ function renderPollCard(poll, pollStatus) {
   const canonicalResults = pollStatus.canonical_poll_result_rows ?? 0;
   const valuesExtracted = pollStatus.candidate_level_values_extracted ? "Yes" : "No";
 
-  const examples = (pollStatus.high_priority_examples || []).slice(0, 3).map((row) => `
+  const examples = (pollStatus.high_priority_examples || []).slice(0, 2).map((row) => `
     <li style="margin-top:6px">
       <a href="${escapeHtml(row.notice_url)}" target="_blank" rel="noreferrer">${escapeHtml(row.link_text)}</a>
     </li>
   `).join("");
 
   card.innerHTML = `
-    <div class="pending-card">
+    <div class="pending-card poll-notice-card">
       <strong>Poll notice watcher active</strong>
       <p class="meta" style="margin-top:8px">
         ${total} Commission des sondages notice candidates are staged for review. ${highPriority} are high-priority likely presidential voting-intention notices.

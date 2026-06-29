@@ -579,3 +579,29 @@ h1 {
   min-height: 0;
   overflow-y: auto;
 }
+
+/* Compact poll notice status card */
+.poll-notice-card {
+  max-height: 230px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.poll-notice-card ul {
+  margin-bottom: 0;
+}
+
+.change-up {
+  color: #86efac;
+  font-weight: 700;
+}
+
+.change-down {
+  color: #fca5a5;
+  font-weight: 700;
+}
+
+.change-flat {
+  color: #cbd5e1;
+  font-weight: 700;
+}
