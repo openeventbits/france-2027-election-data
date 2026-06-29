@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260629-4";
+const CACHE_VERSION = "20260629-5";
 
 const state = {
   candidates: new Map(),
@@ -169,10 +169,12 @@ function renderPollCard(poll, pollStatus) {
   const mediaFeeds = mediaDiscovery.query_feed_count ?? 0;
   const mediaHigh = mediaDiscovery.high_priority_count ?? 0;
   const mediaPending = mediaDiscovery.pending_review_count ?? 0;
+  const mediaPromoted = mediaDiscovery.promote_to_metadata_review_count ?? 0;
   const mediaValuesExtracted = mediaDiscovery.candidate_level_values_extracted ? "Yes" : "No";
+  const mediaPromotionLine = mediaPromoted ? ` ${mediaPromoted} promoted to metadata review.` : "";
   const mediaDiscoveryLine = mediaRows ? `
       <p class="meta">
-        Media discovery: ${mediaRows} staged article mentions from ${mediaFeeds} query feeds. ${mediaHigh} high priority. ${mediaPending} pending review. Candidate-level values extracted: ${mediaValuesExtracted}.
+        Media discovery: ${mediaRows} staged article mentions from ${mediaFeeds} query feeds. ${mediaHigh} high priority.${mediaPromotionLine} ${mediaPending} pending review. Candidate-level values extracted: ${mediaValuesExtracted}.
       </p>
     ` : "";
 
