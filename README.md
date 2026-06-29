@@ -323,3 +323,8 @@ The goal is to make the public evidence layer easier to inspect, reuse, correct,
 ## Review protocols
 
 - [Poll metadata review protocol](docs/protocols/poll-metadata-review.md): metadata-only review rules for high-priority Commission des sondages notices.
+- [Poll media discovery protocol](docs/protocols/poll-media-discovery.md): staging-only RSS/search metadata discovery rules for media mentions, with no article scraping, no candidate-level values, and no canonical writes.
+
+### Poll media discovery
+
+French media poll discovery is a staging-only RSS/search metadata layer. It may collect article titles, source names, URLs, timestamps, inferred polling institutes, priority labels, and manual review decisions. It does not scrape article bodies, extract candidate-level poll values, or write to canonical poll tables. Media mentions may only guide manual review toward official notices, pollster publications, or other legally safe primary sources.
