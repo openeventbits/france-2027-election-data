@@ -14,11 +14,13 @@ EXPECTED_COLUMNS = {
     "poll_candidate_results.csv": ["poll_result_id", "poll_id", "candidate_id", "poll_value", "source_id"],
     "source_feeds.csv": ["feed_id", "source_id", "feed_name", "feed_type", "url", "collection_method", "automation_stage", "status", "refresh_cadence", "review_required"],
     "reference_datasets.csv": ["reference_dataset_id", "title", "producer", "source_id", "url", "topic", "reference_type", "status", "last_verified_at"],
+    "official_documents.csv": ["document_id", "title", "institution", "document_type", "publication_date", "url", "related_candidate_id", "related_event_id", "source_id", "verification_status", "captured_at", "summary_plain", "notes"],
 }
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
 URL_RE = re.compile(r"^https?://")
+TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 
 VALID_SOURCE_STATUS = {"active", "inactive", "needs_review"}
 VALID_COLLECTION_METHOD = {"manual", "manual_review", "automated", "staging"}
@@ -29,6 +31,21 @@ VALID_AUTOMATION_STAGE = {"not_automated", "planned", "staging", "active"}
 VALID_REFRESH_CADENCE = {"hourly", "daily", "weekly", "monthly", "manual"}
 VALID_BOOLEAN = {"true", "false"}
 VALID_REFERENCE_TYPE = {"historical_schema_reference", "historical_baseline", "official_dataset", "methodology_reference"}
+VALID_VERIFICATION_STATUS = {"prototype", "official_source", "primary_source", "secondary_verified", "needs_review", "archived", "corrected"}
+VALID_DOCUMENT_TYPE = {
+    "legal_reference",
+    "poll_notice_index",
+    "campaign_finance_reference",
+    "campaign_finance_guide",
+    "official_notice",
+    "procedural_reference",
+    "campaign_document",
+    "official_decision",
+    "election_calendar",
+    "results_reference",
+    "source_index",
+    "methodology_reference",
+}
 VALID_CANDIDATE_STATUS = {
     "declared_candidate",
     "party_designated",
@@ -82,6 +99,7 @@ def main():
         poll_results = require_columns("poll_candidate_results.csv", EXPECTED_COLUMNS["poll_candidate_results.csv"])
         source_feeds = require_columns("source_feeds.csv", EXPECTED_COLUMNS["source_feeds.csv"])
         reference_datasets = require_columns("reference_datasets.csv", EXPECTED_COLUMNS["reference_datasets.csv"])
+        official_documents = require_columns("official_documents.csv", EXPECTED_COLUMNS["official_documents.csv"])
 
         require_unique(sources, "source_id", "sources.csv")
         require_unique(candidates, "candidate_id", "candidates.csv")
@@ -90,6 +108,7 @@ def main():
         require_unique(poll_results, "poll_result_id", "poll_candidate_results.csv")
         require_unique(source_feeds, "feed_id", "source_feeds.csv")
         require_unique(reference_datasets, "reference_dataset_id", "reference_datasets.csv")
+        require_unique(official_documents, "document_id", "official_documents.csv")
 
         source_ids = {row["source_id"] for row in sources}
         candidate_ids = {row["candidate_id"] for row in candidates}
@@ -134,6 +153,20 @@ def main():
                 errors.append(f"Invalid reference_type for {row['reference_dataset_id']}: {row['reference_type']}")
             if not DATE_RE.match(row["last_verified_at"]):
                 errors.append(f"Invalid last_verified_at for {row['reference_dataset_id']}: {row['last_verified_at']}")
+
+        for row in official_documents:
+            if row["source_id"] not in source_ids:
+                errors.append(f"Unknown source_id in official_documents.csv: {row['source_id']}")
+            if not URL_RE.match(row["url"]):
+                errors.append(f"Invalid official document URL for {row['document_id']}: {row['url']}")
+            if row["verification_status"] not in VALID_VERIFICATION_STATUS:
+                errors.append(f"Invalid verification_status for {row['document_id']}: {row['verification_status']}")
+            if row["document_type"] not in VALID_DOCUMENT_TYPE:
+                errors.append(f"Invalid document_type for {row['document_id']}: {row['document_type']}")
+            if row["publication_date"] and not DATE_RE.match(row["publication_date"]):
+                errors.append(f"Invalid publication_date for {row['document_id']}: {row['publication_date']}")
+            if row["captured_at"] and not TIMESTAMP_RE.match(row["captured_at"]):
+                errors.append(f"Invalid captured_at for {row['document_id']}: {row['captured_at']}")
 
         for row in candidates:
             if row["source_id"] not in source_ids:
@@ -191,6 +224,7 @@ def main():
     print(f"Poll result rows: {len(poll_results)}")
     print(f"Source feeds: {len(source_feeds)}")
     print(f"Reference datasets: {len(reference_datasets)}")
+    print(f"Official documents: {len(official_documents)}")
 
 
 if __name__ == "__main__":
