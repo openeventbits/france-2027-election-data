@@ -158,7 +158,7 @@
     "metadata_review_status": {
       "source_file": "staging/poll_metadata_high_priority_review.csv",
       "total_review_rows": 7,
-      "pending_review_count": 6,
+      "pending_review_count": 5,
       "ready_for_canonical_metadata_count": 0,
       "candidate_level_values_extracted": false,
       "examples": [
@@ -173,7 +173,7 @@
           "review_queue_id": "poll_metadata_review_de917f3c5571775a",
           "notice_link_text": "9975 Pres Toluna HI Suivi du potentiel électoral V3 Lopinion 3 septembre",
           "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/1957",
-          "metadata_review_decision": "pending",
+          "metadata_review_decision": "defer",
           "ready_for_canonical_metadata": "false"
         },
         {
