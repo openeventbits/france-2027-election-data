@@ -14,4 +14,6 @@ src_elabe,Elabe,pollster,Elabe,FR,https://elabe.fr/,,terms_unknown,primary,manua
 src_opinionway,OpinionWay,pollster,OpinionWay,FR,https://www.opinion-way.com/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
 src_odoxa,Odoxa,pollster,Odoxa,FR,https://www.odoxa.fr/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
 src_bva,BVA,pollster,BVA,FR,https://www.bva-group.com/,,terms_unknown,primary,manual_review,active,Pollster source candidate for poll metadata,2026-06-28
-
+src_renaissance,Renaissance,official_party_page,,,https://utilisateur.parti-renaissance.fr/grand-rassemblement/grand-meeting-du-30-mai,,,primary,manual,active,Official Renaissance event registration page used only for event metadata.,
+src_melenchon_official,Jean-Luc Mélenchon official site,official_candidate_page,,,https://melenchon.fr/2026/06/07/meeting-de-jean-luc-melenchon-a-saint-denis/,,,primary,manual,active,Official candidate site event page used only for event metadata.,
+src_horizons,Horizons,official_party_page,,,https://horizonsleparti.fr/,,,primary,manual,active,Official Horizons site used only for event metadata.,
