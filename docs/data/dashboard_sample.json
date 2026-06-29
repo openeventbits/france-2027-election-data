@@ -158,7 +158,7 @@
     "metadata_review_status": {
       "source_file": "staging/poll_metadata_high_priority_review.csv",
       "total_review_rows": 7,
-      "pending_review_count": 7,
+      "pending_review_count": 6,
       "ready_for_canonical_metadata_count": 0,
       "candidate_level_values_extracted": false,
       "examples": [
@@ -166,7 +166,7 @@
           "review_queue_id": "poll_metadata_review_a15b32a660cd1a05",
           "notice_link_text": "9961 Pres Toluna Harris Interactive Lopinion Suivi du potentiel électoral V2 27 juin",
           "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/1942",
-          "metadata_review_decision": "pending",
+          "metadata_review_decision": "defer",
           "ready_for_canonical_metadata": "false"
         },
         {

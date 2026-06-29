@@ -6,3 +6,4 @@ Thumbs.db
 .venv/
 venv/
 local_backups/
+local_review_notes/
