@@ -35,6 +35,9 @@ jobs:
       - name: Export dashboard JSON
         run: python scripts/export_dashboard_json.py
 
+      - name: Enrich dashboard metadata review status
+        run: python scripts/enrich_dashboard_poll_metadata_review_status.py
+
       - name: Validate canonical data
         run: python scripts/validate_data.py
 

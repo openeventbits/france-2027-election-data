@@ -154,6 +154,37 @@
         "triage_label": "likely_presidential_voting_intention_notice"
       }
     ],
-    "note": "Staged poll-notice discovery only. Candidate-level poll values are not extracted or displayed."
+    "note": "Staged poll-notice discovery only. Candidate-level poll values are not extracted or displayed.",
+    "metadata_review_status": {
+      "source_file": "staging/poll_metadata_high_priority_review.csv",
+      "total_review_rows": 7,
+      "pending_review_count": 7,
+      "ready_for_canonical_metadata_count": 0,
+      "candidate_level_values_extracted": false,
+      "examples": [
+        {
+          "review_queue_id": "poll_metadata_review_a15b32a660cd1a05",
+          "notice_link_text": "9961 Pres Toluna Harris Interactive Lopinion Suivi du potentiel électoral V2 27 juin",
+          "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/1942",
+          "metadata_review_decision": "pending",
+          "ready_for_canonical_metadata": "false"
+        },
+        {
+          "review_queue_id": "poll_metadata_review_de917f3c5571775a",
+          "notice_link_text": "9975 Pres Toluna HI Suivi du potentiel électoral V3 Lopinion 3 septembre",
+          "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/1957",
+          "metadata_review_decision": "pending",
+          "ready_for_canonical_metadata": "false"
+        },
+        {
+          "review_queue_id": "poll_metadata_review_3dfdf61fddcb4b47",
+          "notice_link_text": "10049 Pres potentiel vote RN CLUSTER 17 Marianne 14 janvier",
+          "notice_url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/add/2035",
+          "metadata_review_decision": "pending",
+          "ready_for_canonical_metadata": "false"
+        }
+      ],
+      "note": "Metadata-only manual review queue. Candidate-level poll values are not stored here."
+    }
   }
 }

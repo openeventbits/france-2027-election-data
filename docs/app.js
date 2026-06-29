@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260629-2";
+const CACHE_VERSION = "20260629-3";
 
 const state = {
   candidates: new Map(),
@@ -154,6 +154,16 @@ function renderPollCard(poll, pollStatus) {
   const canonicalResults = pollStatus.canonical_poll_result_rows ?? 0;
   const valuesExtracted = pollStatus.candidate_level_values_extracted ? "Yes" : "No";
 
+  const metadataReview = pollStatus.metadata_review_status || {};
+  const metadataRows = metadataReview.total_review_rows ?? 0;
+  const metadataPending = metadataReview.pending_review_count ?? 0;
+  const metadataReady = metadataReview.ready_for_canonical_metadata_count ?? 0;
+  const metadataReviewLine = metadataRows ? `
+      <p class="meta">
+        Metadata review queue: ${metadataRows} metadata-only high-priority rows. ${metadataPending} pending review. ${metadataReady} ready for canonical metadata.
+      </p>
+    ` : "";
+
   const examples = (pollStatus.high_priority_examples || []).slice(0, 2).map((row) => `
     <li style="margin-top:6px">
       <a href="${escapeHtml(row.notice_url)}" target="_blank" rel="noreferrer">${escapeHtml(row.link_text)}</a>
@@ -172,6 +182,7 @@ function renderPollCard(poll, pollStatus) {
       <p class="meta">
         Candidate-level values extracted: ${valuesExtracted}.
       </p>
+      ${metadataReviewLine}
       ${examples ? `
         <p class="meta" style="margin-top:10px"><strong>Review queue examples</strong></p>
         <ul class="meta" style="margin:6px 0 0 18px; padding:0">${examples}</ul>
