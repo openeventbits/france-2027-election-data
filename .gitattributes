@@ -17,3 +17,5 @@ staging/poll_media_query_feeds.csv text eol=lf
 staging/poll_media_mentions.csv text eol=lf
 scripts/validate_poll_media_mentions.py text eol=lf
 scripts/enrich_dashboard_poll_media_discovery_status.py text eol=lf
+scripts/prepare_poll_media_source_resolution.py text eol=lf
+staging/poll_media_source_resolution_queue.csv text eol=lf
