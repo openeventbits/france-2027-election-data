@@ -276,13 +276,13 @@ Useful contributions include:
 
 ## License
 
-Code license and data license will be defined before public launch.
+FR27 Open Data uses separate licenses for code and original structured data.
 
-The intended direction is:
+* Code: MIT License. See `LICENSE`.
+* Original structured data: Creative Commons Attribution 4.0 International, CC BY 4.0. See `LICENSE-DATA.md`.
+* External sources: linked official pages, articles, documents, poll notices, and media materials remain governed by their original publishers' terms. FR27 Open Data does not claim ownership over external source material.
 
-* open-source license for code
-* open data license for datasets
-* careful attribution and source-linking for reused public data
+Reuse should preserve attribution, source links, and relevant methodological caveats where possible.
 
 ## Project Principle
 
