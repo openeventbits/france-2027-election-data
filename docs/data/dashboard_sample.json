@@ -194,8 +194,8 @@
       "high_priority_count": 7,
       "medium_priority_count": 23,
       "low_priority_count": 0,
-      "pending_review_count": 30,
-      "promote_to_metadata_review_count": 0,
+      "pending_review_count": 23,
+      "promote_to_metadata_review_count": 7,
       "candidate_level_values_extracted": false,
       "latest_detected_at": "2026-06-29T09:48:11Z",
       "priority_counts": {
@@ -207,7 +207,8 @@
         "possible_poll_media_mention": 23
       },
       "review_decision_counts": {
-        "pending": 30
+        "promote_to_metadata_review": 7,
+        "pending": 23
       },
       "high_priority_examples": [
         {
