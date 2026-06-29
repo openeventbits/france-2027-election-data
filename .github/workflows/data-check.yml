@@ -20,8 +20,14 @@ jobs:
       - name: Validate data
         run: python scripts/validate_data.py
 
+      - name: Prepare poll metadata review queue
+        run: python scripts/prepare_poll_metadata_review.py
+
       - name: Export dashboard JSON
         run: python scripts/export_dashboard_json.py
 
-      - name: Ensure generated dashboard data is committed
-        run: git diff --exit-code docs/data/dashboard_sample.json
+      - name: Enrich dashboard metadata review status
+        run: python scripts/enrich_dashboard_poll_metadata_review_status.py
+
+      - name: Ensure generated review/dashboard data is committed
+        run: git diff --exit-code staging/poll_metadata_high_priority_review.csv docs/data/dashboard_sample.json
