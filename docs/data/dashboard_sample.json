@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T04:30:21Z",
+  "updated_at": "2026-06-30T12:31:21Z",
   "project": "France 2027 Monitor",
   "data_layer": "FR27 Open Data",
   "status": "prototype",
@@ -150,24 +150,24 @@
     "status_label": "review_queue_active",
     "source_name": "Commission des sondages",
     "source_file": "staging/poll_notices_triaged_review.csv",
-    "total_staged_notices": 86,
+    "total_staged_notices": 87,
     "high_priority_review_count": 7,
     "canonical_poll_metadata_rows": 0,
     "canonical_poll_result_rows": 0,
     "candidate_level_values_extracted": false,
-    "latest_detected_at": "2026-06-29T04:30:21Z",
+    "latest_detected_at": "2026-06-30T12:31:21Z",
     "triage_counts": {
       "candidate_or_field_context_notice": 10,
       "historical_reference": 2,
       "likely_presidential_voting_intention_notice": 7,
       "needs_manual_review": 29,
       "official_communique": 1,
-      "political_barometer_context_notice": 36,
+      "political_barometer_context_notice": 37,
       "source_index_reference": 1
     },
     "review_priority_counts": {
       "high": 7,
-      "low": 39,
+      "low": 40,
       "medium": 40
     },
     "high_priority_examples": [
