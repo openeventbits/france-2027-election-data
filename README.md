@@ -334,4 +334,4 @@ French media poll discovery is a staging-only RSS/search metadata layer. It may 
 
 ## Status
 
-Current public-data status: the dashboard preview now includes three source-linked campaign-event seed rows, four source-linked official-document rows, staged Commission des sondages notice candidates, staged poll-media discovery, and a poll-media source-resolution queue. Canonical poll metadata and candidate-level poll result tables remain empty.
+Current public-data status: the dashboard preview now includes six source-linked campaign-event seed rows, four source-linked official-document rows, staged Commission des sondages notice candidates, staged poll-media discovery, and a poll-media source-resolution queue. Canonical poll metadata and candidate-level poll result tables remain empty.

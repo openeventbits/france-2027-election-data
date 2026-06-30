@@ -8,7 +8,7 @@ The goal is not to predict the election. The goal is to maintain a transparent, 
 
 The repository currently includes:
 
-- 3 source-linked campaign-event seed rows
+- 6 source-linked campaign-event seed rows
 - 4 source-linked official-document rows
 - 86 staged Commission des sondages notice candidates
 - 7 high-priority poll metadata review rows
