@@ -332,6 +332,10 @@ The goal is to make the public evidence layer easier to inspect, reuse, correct,
 French media poll discovery is a staging-only RSS/search metadata layer. It may collect article titles, source names, URLs, timestamps, inferred polling institutes, priority labels, and manual review decisions. It does not scrape article bodies, extract candidate-level poll values, or write to canonical poll tables. Media mentions may only guide manual review toward official notices, pollster publications, or other legally safe primary sources.
 
 
+## Automation review layer
+
+The future automation model is documented in [docs/automation-review-layer.md](docs/automation-review-layer.md). It describes how staged discoveries can eventually be classified as `auto_promote`, `needs_review`, or `reject` while keeping canonical poll-result values blocked.
+
 ## Status
 
 Current public-data status: the dashboard preview now includes six source-linked campaign-event seed rows, four source-linked official-document rows, staged Commission des sondages notice candidates, staged poll-media discovery, and a poll-media source-resolution queue. Canonical poll metadata and candidate-level poll result tables remain empty.
