@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260629-5";
+const CACHE_VERSION = "20260630-1";
 
 const state = {
   candidates: new Map(),
@@ -22,6 +22,7 @@ function formatCandidateStatus(status) {
     primary_candidate: "Primary candidate",
     expected_candidate: "Expected candidate",
     poll_scenario_candidate: "Poll scenario",
+    tracked_public_actor: "Tracked public actor",
     not_announced: "Not announced",
     withdrawn: "Withdrawn",
     needs_review: "Needs review"

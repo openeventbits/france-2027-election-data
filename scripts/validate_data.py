@@ -52,6 +52,7 @@ VALID_CANDIDATE_STATUS = {
     "primary_candidate",
     "expected_candidate",
     "poll_scenario_candidate",
+    "tracked_public_actor",
     "not_announced",
     "withdrawn",
     "needs_review",
