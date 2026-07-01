@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260701-3";
+const CACHE_VERSION = "20260701-4";
 
 const state = {
   candidates: new Map(),
@@ -210,6 +210,58 @@ function renderPollCard(poll, pollStatus) {
   `;
 }
 
+
+function formatDocumentType(value) {
+  const text = (value || "official_document").replace(/_/g, " ");
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function renderOfficialDocuments(documents) {
+  const list = document.getElementById("officialDocuments");
+
+  if (!list) {
+    return;
+  }
+
+  const items = documents || [];
+
+  if (!items.length) {
+    list.innerHTML = `
+      <article class="document-card">
+        <h3>No official documents surfaced yet</h3>
+        <p class="meta">Official-document rows will appear here after export.</p>
+      </article>
+    `;
+    return;
+  }
+
+  list.innerHTML = items.map((doc) => {
+    const publicationDate = doc.publication_date
+      ? ` · ${escapeHtml(doc.publication_date)}`
+      : "";
+
+    const summary = doc.summary_plain
+      ? `<p class="document-summary">${escapeHtml(doc.summary_plain)}</p>`
+      : "";
+
+    return `
+      <article class="document-card">
+        <h3>${escapeHtml(doc.title)}</h3>
+        <p class="document-meta">
+          ${escapeHtml(doc.institution)} · ${escapeHtml(formatDocumentType(doc.document_type))}${publicationDate}
+        </p>
+        ${summary}
+        <p class="document-meta">
+          ${escapeHtml(doc.verification_status || "verification pending")}
+        </p>
+        <a class="document-link" href="${escapeHtml(doc.url)}" target="_blank" rel="noopener">
+          Open source
+        </a>
+      </article>
+    `;
+  }).join("");
+}
+
 function initMap(data) {
   const map = L.map("map", {
     zoomControl: true,
@@ -315,6 +367,7 @@ async function boot() {
   renderWire(data.events);
   renderCandidates(data.candidates);
   renderPollCard(data.latest_poll, data.poll_notice_status);
+  renderOfficialDocuments(data.official_documents);
 }
 
 boot().catch((error) => {

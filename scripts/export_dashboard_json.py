@@ -195,6 +195,21 @@ def main():
         ),
     )
 
+
+    dashboard_documents = []
+    for document in official_documents:
+        dashboard_documents.append({
+            "document_id": document.get("document_id"),
+            "title": document.get("title"),
+            "institution": document.get("institution"),
+            "document_type": document.get("document_type"),
+            "publication_date": document.get("publication_date"),
+            "url": document.get("url"),
+            "source_id": document.get("source_id"),
+            "verification_status": document.get("verification_status"),
+            "summary_plain": document.get("summary_plain"),
+        })
+
     poll_notice_status = summarize_poll_notices(polls, poll_results)
     dataset_updated_at = latest_dataset_timestamp(
         [candidates, events, official_documents, candidate_status_rows],
@@ -211,6 +226,7 @@ def main():
         "status": "prototype",
         "candidates": dashboard_candidates,
         "events": dashboard_events,
+        "official_documents": dashboard_documents,
         "latest_poll": {
             "poll_id": latest_poll.get("poll_id"),
             "institute": latest_poll.get("institute"),
@@ -230,6 +246,7 @@ def main():
     print(f"Wrote {OUT.relative_to(ROOT)}")
     print(f"Candidates: {len(dashboard_candidates)}")
     print(f"Events: {len(dashboard_events)}")
+    print(f"Official documents: {len(dashboard_documents)}")
     print(f"Canonical poll metadata rows: {len(polls)}")
     print(f"Canonical poll result rows: {len(poll_results)}")
     print(f"Staged poll notices: {poll_notice_status['total_staged_notices']}")

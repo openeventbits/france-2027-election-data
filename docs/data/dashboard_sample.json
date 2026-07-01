@@ -139,6 +139,52 @@
       "verification_status": "verified_primary"
     }
   ],
+  "official_documents": [
+    {
+      "document_id": "doc_commission_sondages_notices_index",
+      "title": "Commission des sondages - Espace de consultation des notices",
+      "institution": "Commission des sondages",
+      "document_type": "poll_notice_index",
+      "publication_date": "",
+      "url": "https://www.commission-des-sondages.fr/notices/",
+      "source_id": "src_commission_sondages",
+      "verification_status": "official_source",
+      "summary_plain": "Official notice consultation page for polling notices and methodological references."
+    },
+    {
+      "document_id": "doc_commission_sondages_2027_presidentielle_tag",
+      "title": "Commission des sondages - 2027 Présidentielle notices tag",
+      "institution": "Commission des sondages",
+      "document_type": "poll_notice_index",
+      "publication_date": "",
+      "url": "https://www.commission-des-sondages.fr/notices/medias/fichiers/bytag/14/2027-Presidentielle",
+      "source_id": "src_commission_sondages",
+      "verification_status": "official_source",
+      "summary_plain": "Official tagged index for notices related to the 2027 presidential election."
+    },
+    {
+      "document_id": "doc_cnccfp_elections_comptes_campagne",
+      "title": "CNCCFP - Élections et comptes de campagne",
+      "institution": "CNCCFP",
+      "document_type": "campaign_finance_reference",
+      "publication_date": "",
+      "url": "https://cnccfp.fr/elections/",
+      "source_id": "src_cnccfp",
+      "verification_status": "official_source",
+      "summary_plain": "Official CNCCFP reference page for election campaign accounts and candidate obligations."
+    },
+    {
+      "document_id": "doc_cnccfp_guide_presidentielle_2026_2027",
+      "title": "CNCCFP - Guide à l'usage des candidats à l'élection du Président de la République et de leur mandataire, édition 2026-2027",
+      "institution": "CNCCFP",
+      "document_type": "campaign_finance_guide",
+      "publication_date": "2026-04-03",
+      "url": "https://cnccfp.fr/publication-du-guide-a-lusage-des-candidats-a-lelection-du-president-de-la-republique-et-de-leur-mandataire-edition-2026-2027/",
+      "source_id": "src_cnccfp",
+      "verification_status": "official_source",
+      "summary_plain": "Official CNCCFP publication page for the 2026-2027 presidential-election candidate and mandataire guide."
+    }
+  ],
   "latest_poll": {
     "poll_id": null,
     "institute": null,
