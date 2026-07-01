@@ -46,7 +46,7 @@
       "party": "Les Républicains",
       "bloc": "Right / Les Républicains",
       "current_status": "tracked_public_actor",
-      "color_hex": "#3b82f6",
+      "color_hex": "#F2994A",
       "latest_poll": null,
       "poll_change": null,
       "poll_unit": "%"
@@ -57,7 +57,7 @@
       "party": "Rassemblement National",
       "bloc": "RN / far-right",
       "current_status": "tracked_public_actor",
-      "color_hex": "#1d4ed8",
+      "color_hex": "#E11D48",
       "latest_poll": null,
       "poll_change": null,
       "poll_unit": "%"
