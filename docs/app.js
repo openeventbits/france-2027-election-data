@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260701-5";
+const CACHE_VERSION = "20260701-6";
 
 const state = {
   candidates: new Map(),

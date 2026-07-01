@@ -12,7 +12,7 @@ The roadmap prioritizes evidence quality, source provenance, correction paths, a
 | --- | --- |
 | Source registry | 20 registered sources |
 | Tracked public actors | 5 source-linked actor rows |
-| Campaign events | 8 source-linked seed rows |
+| Campaign events | 10 source-linked seed rows |
 | Official documents | 4 source-linked rows |
 | Commission des sondages notices | 87 staged notice candidates; 7 high-priority metadata review rows |
 | Poll-media discovery | 30 staged RSS/search mentions; 7 promoted to source resolution; 23 pending review |
@@ -29,7 +29,7 @@ Post-preview work completed:
 
 - surfaced official-document rows in the dashboard
 - expanded tracked public actors from 3 to 5
-- expanded source-linked campaign-event rows from 6 to 8
+- expanded source-linked campaign-event rows from 6 to 10
 - expanded registered sources from 18 to 20
 - differentiated candidate dashboard colors for readability
 - preserved poll-safety boundaries:

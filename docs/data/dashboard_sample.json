@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-01T15:57:56Z",
-  "dataset_updated_at": "2026-07-01T15:57:56Z",
+  "updated_at": "2026-07-01T17:44:54Z",
+  "dataset_updated_at": "2026-07-01T17:44:54Z",
   "poll_notice_latest_detected_at": "2026-06-30T12:31:21Z",
   "timestamp_note": "updated_at and dataset_updated_at are derived from the latest canonical or staged-row timestamp. poll_notice_latest_detected_at is poll-notice discovery time.",
   "project": "France 2027 Monitor",
@@ -65,6 +65,22 @@
   ],
   "events": [
     {
+      "event_id": "evt_2026_0010",
+      "event_date": "2026-03-03",
+      "event_type": "public_meeting",
+      "title": "Grand meeting des élections municipales à Nîmes",
+      "candidate_id": "cand_bardella",
+      "candidate_name": "Jordan Bardella",
+      "location_name": "Nîmes",
+      "commune": "Nîmes",
+      "region": "Occitanie",
+      "latitude": 43.8367,
+      "longitude": 4.3601,
+      "source_name": "Rassemblement National",
+      "source_url": "https://rassemblementnational.fr/agenda/grand-meeting-des-elections-municipales-a-nimes",
+      "verification_status": "verified_primary"
+    },
+    {
       "event_id": "evt_2026_0006",
       "event_date": "2026-03-09",
       "event_type": "public_meeting",
@@ -78,6 +94,22 @@
       "longitude": 2.3522,
       "source_name": "Jean-Luc Mélenchon official site",
       "source_url": "https://melenchon.fr/2026/03/09/meeting-avec-jean-luc-melenchon-et-sophia-chikirou-a-paris/",
+      "verification_status": "verified_primary"
+    },
+    {
+      "event_id": "evt_2026_0009",
+      "event_date": "2026-05-07",
+      "event_type": "public_meeting",
+      "title": "La Nouvelle France à Marseille",
+      "candidate_id": "cand_melenchon",
+      "candidate_name": "Jean-Luc Mélenchon",
+      "location_name": "Marseille",
+      "commune": "Marseille",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "latitude": 43.2965,
+      "longitude": 5.3698,
+      "source_name": "Jean-Luc Mélenchon official site",
+      "source_url": "https://melenchon.fr/2026/05/07/la-nouvelle-france-a-marseille/",
       "verification_status": "verified_primary"
     },
     {

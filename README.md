@@ -35,7 +35,7 @@ Current public-data inventory:
 | --- | --- |
 | Source registry | 20 registered sources |
 | Tracked public actors | 5 source-linked actor rows |
-| Campaign events | 8 source-linked seed rows |
+| Campaign events | 10 source-linked seed rows |
 | Official documents | 4 source-linked rows |
 | Commission des sondages notices | 87 staged notice candidates; 7 high-priority metadata review rows |
 | Poll-media discovery | 30 staged RSS/search mentions; 7 promoted to source resolution; 23 pending review |
@@ -344,4 +344,4 @@ The future automation model is documented in [docs/automation-review-layer.md](d
 
 ## Status
 
-Current public-data status: the dashboard preview now includes eight source-linked campaign-event seed rows, four source-linked official-document rows, staged Commission des sondages notice candidates, staged poll-media discovery, and a poll-media source-resolution queue. Canonical poll metadata and candidate-level poll result tables remain empty.
+Current public-data status: the dashboard preview now includes ten source-linked campaign-event seed rows, four source-linked official-document rows, staged Commission des sondages notice candidates, staged poll-media discovery, and a poll-media source-resolution queue. Canonical poll metadata and candidate-level poll result tables remain empty.
