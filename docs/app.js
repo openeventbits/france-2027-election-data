@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260630-1";
+const CACHE_VERSION = "20260701-1";
 
 const state = {
   candidates: new Map(),
@@ -237,6 +237,27 @@ function initMap(data) {
   });
 }
 
+
+function formatTimestamp(value) {
+  if (!value) return "not available";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return date.toLocaleString();
+}
+
+function renderUpdatedAt(data) {
+  const datasetUpdatedAt = data.dataset_updated_at || data.updated_at;
+  const pollNoticeDetectedAt = data.poll_notice_latest_detected_at || data.poll_notice_status?.latest_detected_at;
+
+  const parts = [`Dataset updated: ${formatTimestamp(datasetUpdatedAt)}`];
+
+  if (pollNoticeDetectedAt && pollNoticeDetectedAt !== datasetUpdatedAt) {
+    parts.push(`Poll notices detected: ${formatTimestamp(pollNoticeDetectedAt)}`);
+  }
+
+  document.getElementById("updatedAt").textContent = parts.join(" · ");
+}
+
 async function boot() {
   const response = await fetch(`./data/dashboard_sample.json?v=${CACHE_VERSION}`);
   const data = await response.json();
@@ -245,7 +266,7 @@ async function boot() {
     state.candidates.set(candidate.candidate_id, candidate);
   });
 
-  document.getElementById("updatedAt").textContent = new Date(data.updated_at).toLocaleString();
+  renderUpdatedAt(data);
 
   initMap(data);
   renderWire(data.events);

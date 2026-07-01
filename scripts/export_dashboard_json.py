@@ -33,6 +33,54 @@ def to_number(value):
         return value
 
 
+
+def normalize_timestamp(value):
+    value = (value or "").strip()
+    if not value:
+        return None
+
+    if len(value) == 10 and value[4] == "-" and value[7] == "-":
+        return f"{value}T00:00:00Z"
+
+    if value.endswith("+00:00"):
+        return value[:-6] + "Z"
+
+    return value
+
+
+def collect_row_timestamps(rows):
+    fields = (
+        "captured_at",
+        "updated_at",
+        "last_verified_at",
+        "status_as_of",
+        "status_date",
+        "detected_at",
+        "published_at",
+        "publication_date",
+    )
+
+    values = []
+    for row in rows:
+        for field in fields:
+            value = normalize_timestamp(row.get(field))
+            if value:
+                values.append(value)
+
+    return values
+
+
+def latest_dataset_timestamp(row_groups, poll_notice_status):
+    values = []
+    for rows in row_groups:
+        values.extend(collect_row_timestamps(rows))
+
+    poll_latest = normalize_timestamp(poll_notice_status.get("latest_detected_at"))
+    if poll_latest:
+        values.append(poll_latest)
+
+    return max(values) if values else "2026-06-27T12:00:00Z"
+
 def summarize_poll_notices(polls, poll_results):
     triaged_path = STAGING / "poll_notices_triaged_review.csv"
     raw_path = STAGING / "poll_notices_review.csv"
@@ -93,6 +141,8 @@ def main():
     events = read_csv("campaign_events.csv")
     polls = read_csv("polls_metadata.csv")
     poll_results = read_csv("poll_candidate_results.csv")
+    official_documents = read_csv("official_documents.csv")
+    candidate_status_rows = read_csv("candidate_status_log.csv")
 
     latest_poll = polls[0] if polls else {}
 
@@ -137,9 +187,16 @@ def main():
         })
 
     poll_notice_status = summarize_poll_notices(polls, poll_results)
+    dataset_updated_at = latest_dataset_timestamp(
+        [candidates, events, official_documents, candidate_status_rows],
+        poll_notice_status,
+    )
 
     payload = {
-        "updated_at": poll_notice_status.get("latest_detected_at") or "2026-06-27T12:00:00Z",
+        "updated_at": dataset_updated_at,
+        "dataset_updated_at": dataset_updated_at,
+        "poll_notice_latest_detected_at": poll_notice_status.get("latest_detected_at"),
+        "timestamp_note": "updated_at and dataset_updated_at are derived from the latest canonical or staged-row timestamp. poll_notice_latest_detected_at is poll-notice discovery time.",
         "project": "France 2027 Monitor",
         "data_layer": "FR27 Open Data",
         "status": "prototype",

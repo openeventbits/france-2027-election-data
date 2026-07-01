@@ -1,5 +1,8 @@
 {
-  "updated_at": "2026-06-30T12:31:21Z",
+  "updated_at": "2026-06-30T13:52:04Z",
+  "dataset_updated_at": "2026-06-30T13:52:04Z",
+  "poll_notice_latest_detected_at": "2026-06-30T12:31:21Z",
+  "timestamp_note": "updated_at and dataset_updated_at are derived from the latest canonical or staged-row timestamp. poll_notice_latest_detected_at is poll-notice discovery time.",
   "project": "France 2027 Monitor",
   "data_layer": "FR27 Open Data",
   "status": "prototype",
