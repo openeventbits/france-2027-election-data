@@ -298,17 +298,11 @@ Every dataset row should be correctable through GitHub issues or pull requests. 
 
 ## Contributing
 
-Useful contributions include:
+Contributions are welcome when they improve source quality, reviewability, or dashboard reliability.
 
-* source suggestions
-* candidate/party source links
-* schema review
-* poll metadata review
-* official document discovery
-* dashboard improvements
-* validation scripts
-* accessibility improvements
-* French election-law/source expertise
+Good first contributions include adding one verified campaign event from an official source, suggesting one official source, resolving one promoted poll-media pointer to a safer source, testing the dashboard, or filing a correction.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution rules, validation commands, and poll-safety boundaries.
 
 ## License
 

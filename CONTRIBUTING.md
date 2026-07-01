@@ -1,80 +1,161 @@
 # Contributing
 
-FR27 Open Data welcomes contributions that improve the public, source-linked data layer for the French 2027 presidential election.
+Thank you for considering a contribution to France 2027 Monitor / FR27 Open Data.
 
-The project is in early prototype stage. The most useful contributions are small, specific, and source-backed.
+This project is a conservative, source-linked election-data layer. The goal is not volume. The goal is a small public dataset where every visible claim can be inspected, sourced, reviewed, and corrected.
 
-## Good Contributions
+## Good first contributions
 
-Useful contributions include:
+Useful first contributions include:
 
-- suggesting official or primary sources
-- adding candidate or party source links
-- improving dataset schemas
-- reviewing poll metadata fields
-- finding official documents
-- improving validation scripts
-- improving dashboard accessibility
-- identifying duplicate or incorrect rows
-- improving French election-law/source documentation
+- add one verified campaign event from an official source
+- suggest one official source for the source registry
+- resolve one promoted poll-media pointer to an official or pollster source
+- test the dashboard on another browser or screen size
+- file a correction for a source, location, date, candidate link, or metadata issue
 
-## Source-First Rule
+A good first contribution is small, specific, and source-linked.
 
-Every proposed data row should include a source.
+## Data contribution rules
+
+### Campaign events
+
+Campaign-event rows belong in:
+
+```text
+data/campaign_events.csv
+```
+
+A campaign event should have:
+
+- a stable `event_id`
+- an event date
+- an event type
+- a short title
+- a candidate or party link where relevant
+- a commune, department, and region
+- manually checked latitude and longitude
+- a registered `source_id`
+- an HTTPS `source_url`
+- `verification_status` set to `verified_primary` only when the source is official or primary
+- a short note explaining the source and coordinate choice
 
 Preferred sources:
 
-- official institutions
-- official open-data portals
-- polling authorities
-- candidate or party official sources
-- pollster notices
-- public official documents
+- official candidate pages
+- official party pages
+- official institutional pages
+- official event agendas
+- official campaign pages
 
-Secondary media sources may be useful for verification, but should not become the backbone of the project.
+Avoid adding rows from broad media coverage when an official or primary source exists.
 
-## Data Workflow
+### Sources
 
-The preferred workflow is:
+Source rows belong in:
 
 ```text
-source suggestion
-  -> staging row
-  -> validation
-  -> review
-  -> canonical /data row
-  -> JSON export
-  -> dashboard
+data/sources.csv
 ```
 
-During the MVP phase, automation should write to `/staging`, not directly to `/data`.
+A source should be added only if it is useful for future evidence collection.
 
-## Pull Requests
+Good source candidates include:
 
-A good pull request should:
+- official candidate pages
+- official party pages
+- institutional election pages
+- Commission des sondages pages
+- CNCCFP pages
+- legally safe pollster source pages
+- official open-data catalog entries
 
-* keep changes small
-* explain what changed
-* link the source
-* avoid unrelated edits
-* update `data/changelog.csv` when correcting public data
-* update methodology or schemas when changing the data model
+Do not add sources only to increase the source count.
 
-## What Not To Submit
+### Polls
 
-Please do not submit:
+Poll handling is intentionally conservative.
 
-* predictions
-* candidate rankings
-* sentiment labels
-* unsourced claims
-* copied article text
-* proprietary poll tables without clear reuse rights
-* private or non-public personal data
-* broad scraped media dumps
+Do not add candidate-level poll values.
 
-## Tone
+Do not extract candidate scores from media articles.
 
-Keep contributions neutral, civic, precise, and source-first.
+Do not add polling averages, polling rankings, or forecast-style fields.
 
-This project is not partisan. It is a public evidence layer.
+Canonical poll metadata may be added only after manual review confirms:
+
+- source authority
+- institute
+- sponsor or publisher context
+- publication date
+- fieldwork period
+- sample and method where available
+- reuse conditions
+
+Until that review is complete, staged poll rows remain review material and should not be treated as canonical public data.
+
+## Local validation
+
+Before opening a pull request, run:
+
+```powershell
+python .\scripts\validate_data.py
+python .\scripts\validate_poll_media_mentions.py
+node --check .\docs\app.js
+```
+
+For dashboard-data changes, also regenerate the public dashboard JSON:
+
+```powershell
+python .\scripts\export_dashboard_json.py
+python .\scripts\enrich_dashboard_poll_metadata_review_status.py
+python .\scripts\enrich_dashboard_poll_media_discovery_status.py
+```
+
+Then run validation again.
+
+## Pull request checklist
+
+Before submitting a pull request, check that:
+
+- every new canonical row has a source URL
+- every new event has manually checked coordinates
+- every new event uses a registered source ID
+- no candidate-level poll values were added
+- canonical poll metadata remains empty unless a reviewed source supports promotion
+- generated dashboard JSON is updated when canonical data changes
+- validation passes locally
+
+## Scope boundaries
+
+These poll-safety boundaries and scope limits protect the dataset from weak, unsafe, or interpretive election claims.
+
+This project does not accept:
+
+- polling averages
+- forecast models
+- candidate rankings
+- broad media scraping
+- social-media scraping
+- automated publication of unreviewed poll values
+- partisan analysis
+
+## Correction policy
+
+Corrections are welcome.
+
+Useful correction reports include:
+
+- the row ID
+- the field that appears wrong
+- the proposed correction
+- the supporting source URL
+- a short explanation
+
+Corrections should improve traceability, not add interpretation.
+
+## Operating principle
+
+Prefer one verified row over ten weak rows.
+
+Every public row should be source-linked, reviewable, and correctable.
