@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-30T13:52:04Z",
-  "dataset_updated_at": "2026-06-30T13:52:04Z",
+  "updated_at": "2026-07-01T15:57:56Z",
+  "dataset_updated_at": "2026-07-01T15:57:56Z",
   "poll_notice_latest_detected_at": "2026-06-30T12:31:21Z",
   "timestamp_note": "updated_at and dataset_updated_at are derived from the latest canonical or staged-row timestamp. poll_notice_latest_detected_at is poll-notice discovery time.",
   "project": "France 2027 Monitor",
@@ -36,6 +36,28 @@
       "bloc": "Left",
       "current_status": "tracked_public_actor",
       "color_hex": "#C026D3",
+      "latest_poll": null,
+      "poll_change": null,
+      "poll_unit": "%"
+    },
+    {
+      "candidate_id": "cand_retailleau",
+      "display_name": "Bruno Retailleau",
+      "party": "Les Républicains",
+      "bloc": "Right / Les Républicains",
+      "current_status": "tracked_public_actor",
+      "color_hex": "#3b82f6",
+      "latest_poll": null,
+      "poll_change": null,
+      "poll_unit": "%"
+    },
+    {
+      "candidate_id": "cand_bardella",
+      "display_name": "Jordan Bardella",
+      "party": "Rassemblement National",
+      "bloc": "RN / far-right",
+      "current_status": "tracked_public_actor",
+      "color_hex": "#1d4ed8",
       "latest_poll": null,
       "poll_change": null,
       "poll_unit": "%"
@@ -107,6 +129,22 @@
       "verification_status": "verified_primary"
     },
     {
+      "event_id": "evt_2026_0007",
+      "event_date": "2026-06-20",
+      "event_type": "public_meeting",
+      "title": "Grand meeting de Bruno Retailleau au Parc Floral",
+      "candidate_id": "cand_retailleau",
+      "candidate_name": "Bruno Retailleau",
+      "location_name": "Parc Floral de Paris",
+      "commune": "Paris",
+      "region": "Île-de-France",
+      "latitude": 48.8389,
+      "longitude": 2.4444,
+      "source_name": "Les Républicains",
+      "source_url": "https://republicains.fr/actualites/2026/04/22/le-20-juin-tout-commence-au-parc-floral/",
+      "verification_status": "verified_primary"
+    },
+    {
       "event_id": "evt_2026_0004",
       "event_date": "2026-06-27",
       "event_type": "public_meeting",
@@ -120,6 +158,22 @@
       "longitude": -1.0736,
       "source_name": "Renaissance",
       "source_url": "https://utilisateur.parti-renaissance.fr/grand-rassemblement/meeting-sanguinet",
+      "verification_status": "verified_primary"
+    },
+    {
+      "event_id": "evt_2026_0008",
+      "event_date": "2026-07-04",
+      "event_type": "party_event",
+      "title": "Marine Le Pen et Jordan Bardella à Liévin",
+      "candidate_id": "cand_bardella",
+      "candidate_name": "Jordan Bardella",
+      "location_name": "Liévin",
+      "commune": "Liévin",
+      "region": "Hauts-de-France",
+      "latitude": 50.42,
+      "longitude": 2.778,
+      "source_name": "Rassemblement National",
+      "source_url": "https://rassemblementnational.fr/agenda",
       "verification_status": "verified_primary"
     },
     {
