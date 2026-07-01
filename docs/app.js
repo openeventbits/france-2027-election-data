@@ -1,4 +1,4 @@
-const CACHE_VERSION = "20260701-2";
+const CACHE_VERSION = "20260701-3";
 
 const state = {
   candidates: new Map(),
@@ -215,25 +215,68 @@ function initMap(data) {
     zoomControl: true,
     scrollWheelZoom: true,
     zoomSnap: 0.25,
-    zoomDelta: 0.25
-  }).setView([46.75, 2.35], 6.35);
-
-  window.addEventListener("resize", () => map.invalidateSize());
-  setTimeout(() => map.invalidateSize(), 150);
+    zoomDelta: 0.25,
+  });
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-    maxZoom: 19
+    maxZoom: 19,
   }).addTo(map);
 
-  data.events.forEach((event) => {
+  const eventBounds = [];
+
+  (data.events || []).forEach((event) => {
+    const latitude = Number(event.latitude);
+    const longitude = Number(event.longitude);
+
+    if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+      return;
+    }
+
     const candidate = candidateById(event.candidate_id);
     const color = candidate.color_hex || "#38bdf8";
-    L.marker([event.latitude, event.longitude], {
-      icon: createMarkerIcon(color)
+
+    L.marker([latitude, longitude], {
+      icon: createMarkerIcon(color),
     })
       .addTo(map)
       .bindPopup(popupHtml(event));
+
+    eventBounds.push([latitude, longitude]);
+  });
+
+  function fitEventBounds() {
+    if (eventBounds.length === 0) {
+      map.setView([46.7, 2.4], 5.25);
+      return;
+    }
+
+    if (eventBounds.length === 1) {
+      map.setView(eventBounds[0], 6);
+      return;
+    }
+
+    map.fitBounds(eventBounds, {
+      paddingTopLeft: [36, 36],
+      paddingBottomRight: [36, 36],
+      maxZoom: 6,
+    });
+  }
+
+  fitEventBounds();
+
+  setTimeout(() => {
+    map.invalidateSize();
+    fitEventBounds();
+  }, 150);
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      map.invalidateSize();
+      fitEventBounds();
+    }, 160);
   });
 }
 

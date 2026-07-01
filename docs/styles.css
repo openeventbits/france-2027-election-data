@@ -605,3 +605,139 @@ h1 {
   color: #cbd5e1;
   font-weight: 700;
 }
+
+/* Responsive laptop and map viewport fit */
+@media (min-width: 981px) and (max-width: 1720px), (min-width: 981px) and (max-height: 930px) {
+  .app-shell {
+    padding: clamp(8px, 0.8vw, 14px);
+    gap: clamp(6px, 0.75vh, 10px);
+  }
+
+  .topbar {
+    gap: 12px;
+  }
+
+  .topbar h1 {
+    font-size: clamp(1.6rem, 2.15vw, 2.3rem);
+    line-height: 1;
+  }
+
+  .eyebrow {
+    margin-bottom: 2px;
+    font-size: 0.72rem;
+    letter-spacing: 0.11em;
+  }
+
+  .status-pill {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .prototype-warning {
+    padding: 0.52rem 0.75rem;
+    font-size: clamp(0.78rem, 0.88vw, 0.92rem);
+    line-height: 1.32;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr) clamp(315px, 24vw, 360px);
+    gap: 10px;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .map-panel,
+  .side-panel {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .side-panel {
+    gap: 10px;
+    grid-template-rows: minmax(135px, 0.48fr) minmax(185px, 0.58fr) minmax(0, 0.82fr);
+    overflow: hidden;
+  }
+
+  .panel-block {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .panel-header {
+    gap: 0.7rem;
+    padding: 0.65rem 0.85rem 0.35rem;
+  }
+
+  .panel-header h2 {
+    font-size: 0.95rem;
+    line-height: 1.05;
+  }
+
+  #updatedAt {
+    font-size: 0.74rem;
+    line-height: 1.22;
+  }
+
+  #map {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .map-caption {
+    padding: 0.42rem 0.72rem;
+    font-size: 0.78rem;
+  }
+
+  .event-wire,
+  .poll-card,
+  .candidate-list {
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+  }
+
+  .event-item,
+  .candidate-card {
+    padding: 0.68rem 0.78rem;
+  }
+
+  .poll-card {
+    padding: 0.72rem 0.82rem;
+  }
+
+  .event-item h3,
+  .candidate-card h3,
+  .poll-card h3 {
+    font-size: 0.92rem;
+    line-height: 1.14;
+  }
+
+  .meta,
+  .candidate-card,
+  .poll-card {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 981px) and (max-height: 850px) {
+  .side-panel {
+    grid-template-rows: minmax(120px, 0.42fr) minmax(160px, 0.5fr) minmax(0, 0.75fr);
+  }
+
+  .prototype-warning {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+  }
+
+  .panel-header {
+    padding-top: 0.55rem;
+  }
+
+  .event-item,
+  .candidate-card,
+  .poll-card {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
