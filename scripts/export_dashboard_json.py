@@ -186,6 +186,15 @@ def main():
             "verification_status": event["verification_status"]
         })
 
+    dashboard_events = sorted(
+        dashboard_events,
+        key=lambda row: (
+            row.get("event_date") or "",
+            row.get("event_time") or "",
+            row.get("event_id") or "",
+        ),
+    )
+
     poll_notice_status = summarize_poll_notices(polls, poll_results)
     dataset_updated_at = latest_dataset_timestamp(
         [candidates, events, official_documents, candidate_status_rows],
