@@ -25,25 +25,31 @@ In short: France 2027 Monitor is the monitor; FR27 Open Data is the data layer b
 
 ## Repository Status
 
-France 2027 Monitor is an early public dashboard preview.
+France 2027 Monitor is an early public dashboard preview backed by FR27 Open Data.
 
-FR27 Open Data, the source-linked data layer behind the monitor, is an early source-linked dataset with reviewed seed rows and staging queues.
+**Live dashboard:** https://openeventbits.github.io/france-2027-election-data/
 
-Current working components:
+Current public-data inventory:
 
-- source-linked CSV data model
-- source registry
-- candidate registry
-- campaign event schema
-- poll metadata schema
-- candidate-level poll snapshot schema
-- dashboard JSON export
-- static live-map prototype
-- data validation script
-- GitHub Actions data-check workflow
-- correction and contribution workflow
+| Layer | Current status |
+| --- | --- |
+| Source registry | 18 registered sources |
+| Tracked public actors | 3 source-linked actor rows |
+| Campaign events | 6 source-linked seed rows |
+| Official documents | 4 source-linked rows |
+| Commission des sondages notices | 87 staged notice candidates; 7 high-priority metadata review rows |
+| Poll-media discovery | 30 staged RSS/search mentions; 7 promoted to source resolution; 23 pending review |
+| Poll-media source resolution | 7 promoted media pointers awaiting official/pollster-source resolution |
+| Canonical poll metadata | 0 rows |
+| Candidate-level poll results | 0 rows; candidate-level values remain blocked |
 
-The dashboard currently includes source-linked campaign-event seed rows and source-linked official-document rows. Seed rows demonstrate the public data model; they are not comprehensive campaign coverage. New public-source rows should pass through staging, validation, and review before becoming canonical data.
+The dashboard shows real source-linked campaign-event seed rows and review-status cards. It is not comprehensive campaign coverage yet.
+
+Staged rows are discovery or review material. They are not canonical public data until reviewed and promoted into `/data`.
+
+Canonical poll metadata and candidate-level poll result tables remain empty. Poll values are not extracted or published until verified public notices, source methodology, and reuse conditions are reviewed.
+
+Good first contributions are narrow and source-linked: add one verified campaign event, suggest one official source, resolve one promoted poll-media pointer to an official or pollster source, or file a correction. Use the issue templates in `.github/ISSUE_TEMPLATE/`.
 
 ## Current Data Pipeline
 
